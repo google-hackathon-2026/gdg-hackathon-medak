@@ -1,0 +1,3 @@
+[submodule "medak"]
+	path = medak
+	url = ssh://git@github.com/google-hackathon-2026/medak.git
