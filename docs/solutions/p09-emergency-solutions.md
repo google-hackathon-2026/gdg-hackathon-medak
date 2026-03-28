@@ -6,6 +6,16 @@ Deaf and speech-impaired people cannot call 112 in Serbia (and most of Europe). 
 
 **Key constraints:** Can't call real 112 in demo. Sign language recognition unreliable in 48h. Focus on text + speech input. System must be multi-agent (3+) and genuinely agentic (makes real calls, communicates bidirectionally).
 
+> **[POST-HACKATHON UPDATE]** The team built a system closest to **Solution 1 (Voice Bridge Pipeline)** but simplified:
+> - **2 agents instead of 4:** User Agent (combines Intake + Triage + Feedback) and Dispatch Agent (Caller). No separate Feedback Agent — the User Agent handles all user-facing communication.
+> - **Deterministic orchestrator** manages phase transitions (INTAKE → TRIAGE → LIVE_CALL → RESOLVED/FAILED) based on confidence scoring, not LLM decisions.
+> - **Passive-first triage:** The User Agent observes mic/camera passively and may surface optional yes/no questions. User input is supplementary, never required.
+> - **Confidence threshold (0.85) or 10-second timeout** triggers the dispatch call.
+> - **Redis shared state** (EmergencySnapshot) is the sole communication channel between agents — no direct agent-to-agent messaging.
+> - **Tech stack:** React Native (Expo 54) frontend, FastAPI backend, Gemini 2.0 Flash Live, Twilio VoIP, Redis.
+>
+> The project was named **"Medak"** (called "Voice Bridge" in the design doc). See `medak/docs/design-document.md`.
+
 ---
 
 ## Solution 1: Voice Bridge Pipeline

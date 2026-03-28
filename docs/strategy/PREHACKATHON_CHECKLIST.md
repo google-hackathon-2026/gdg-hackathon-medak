@@ -1,4 +1,15 @@
-# 🦋 Cocoon — Pre-Hackathon Setup Checklist
+# Pre-Hackathon Setup Checklist
+
+> **[POST-HACKATHON UPDATE]** This checklist was prepared for P11 "Cocoon" (autism meltdown prediction). The team built **P09 "Medak"** instead with a different tech stack. Key differences:
+> - **GCP project:** `medak-hackathon` (not `cocoon-hackathon`)
+> - **Frontend:** React Native / Expo 54 (not Flutter/Kotlin/Android native)
+> - **Backend:** FastAPI + `uv` package manager (not pip + Firebase Admin)
+> - **Database:** Redis only (not Firebase Firestore)
+> - **AI:** Gemini 2.0 Flash Live sessions via `google-genai` (not Vertex AI time-series)
+> - **No Health Connect, Wear OS, or sensor monitoring** — Medak uses mic/camera/GPS for emergency triage
+>
+> Sections that remain useful regardless: Gemini API setup, Twilio setup, Docker basics, Git workflow, verification approach.
+> For the actual Medak setup, see `medak/.env.example` and `medak/CLAUDE.md`.
 
 > **Do ALL of this the evening before or morning of the hackathon.**
 > Every minute saved on setup = more time building the actual product.

@@ -2,6 +2,8 @@
 
 Unique, high-signal insights discovered during research. Updated continuously.
 
+> **[POST-HACKATHON UPDATE]** These insights were collected during the pre-hackathon research phase. The team ultimately built **P09 Emergency Dispatch as "Medak"** rather than P11 Cocoon. The research below remains valuable; see the final entry for the selection rationale.
+
 ---
 
 ## From Discovery Agent: Disability Landscape
@@ -56,3 +58,11 @@ Unique, high-signal insights discovered during research. Updated continuously.
 - Belgrade university TAs will appreciate local/Serbian relevance
 - Senior engineer from SFEIR (France) will look for engineering quality
 - The ADK + A2A workshop today primed judges to appreciate multi-agent architecture done well
+
+## Final Decision: P09 Medak Selected Over P11 Cocoon
+
+Despite P11 scoring #1 (34/40), the team chose P09 Emergency Dispatch (32/40) and built it as **Medak**. Key factors:
+- **Demo clarity:** P09's "AI calls 112 for you" is immediately understandable. P11's meltdown prediction requires explaining invisible disability + physiological signals + time-series forecasting in a 5-minute pitch.
+- **Multi-agent natural fit:** P09 decomposes cleanly into User Agent (triage) + Dispatch Agent (112 call) coordinated by a deterministic orchestrator. P11's sensor-per-agent model was less distinct.
+- **Build confidence:** P09's core loop (SOS trigger → passive triage → VoIP call) uses well-documented APIs (Twilio, Gemini Live). P11 required Health Connect wearable data that might not demo reliably.
+- **Actual architecture:** 2 Gemini 2.0 Flash Live agents + deterministic Python orchestrator + Redis shared state. See `medak/docs/design-document.md`.

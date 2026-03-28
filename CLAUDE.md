@@ -18,17 +18,21 @@ Background research relevant to the project:
 - `google-tech-stack-reference.md` — Google API code snippets (Gemini, Maps, Health Connect)
 
 ### docs/solutions/
-- `p09-emergency-solutions.md` — 4 solution architectures designed for P09
+- `p09-emergency-solutions.md` — 5 solution architectures designed for P09
 - `p09-emergency-scoreboard.md` — Comparative scoring of solutions
 
 ### docs/strategy/
 Hackathon-level strategy and planning:
 - `HACKATHON_GUIDE.md` — Theme, sponsor constraints, general approach
-- `COMPETITIVE_ANALYSIS.md` — What other teams will build (note: references "Cocoon" as project name in header, actual project is Medak)
-- `PREHACKATHON_CHECKLIST.md` — Account setup, dependencies, templates (note: some sections reference "Cocoon", adapt for Medak context)
+- `COMPETITIVE_ANALYSIS.md` — What other teams will build (annotated: header and Sections 4-8 reference Cocoon/P11; team built P09 Medak instead)
+- `PREHACKATHON_CHECKLIST.md` — Account setup, dependencies, templates (annotated: written for Cocoon/P11 with Android/Flutter stack; actual Medak stack: React Native, FastAPI, Redis)
 - `PROBLEM_SCOREBOARD.md` — 12 problems ranked by combined score
 - `INSIGHTS.md` — Cross-cutting research findings
 - `BACKUP_REHEARSE_CALL_BRIEF.md` — Original P09 emergency brief (5-agent architecture)
+
+## Documentation Status
+
+All `docs/` files have been annotated with `[POST-HACKATHON UPDATE]` callouts explaining that the team pivoted from P11 Cocoon to P09 Medak. Original research content is preserved. The `docs/research/` directory needed no updates — its P09-specific files were always aligned with the final project choice.
 
 ## Working with Code
 

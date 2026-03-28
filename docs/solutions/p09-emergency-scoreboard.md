@@ -1,5 +1,7 @@
 # P09 — Emergency Dispatch for Deaf/Speech-Impaired: Scoreboard
 
+> **[POST-HACKATHON UPDATE]** This scoreboard evaluated 2 of the 5 proposed solutions. The team built neither as designed. The actual implementation is a modified **Voice Bridge Pipeline** (Solution 1 from `p09-emergency-solutions.md`) simplified to 2 agents + deterministic orchestrator. Key differences from "Rehearse-Then-Call" (Solution A here): no rehearsal phase, passive mic/camera triage instead of explicit interview, confidence-based dispatch trigger instead of gap analysis. See `medak/docs/design-document.md`.
+
 ## Solution A: "Rehearse-Then-Call"
 
 **Concept:** Two-phase emergency calling — rehearse against a simulated dispatcher AI to identify info gaps, then make a polished live call with all data pre-structured.
@@ -104,3 +106,9 @@ Solution A's rehearsal concept is both the technical core and the demo hook — 
 
 ### Recommendation
 **Solution A is the stronger hackathon entry.** It has a tighter scope, a more novel core idea, a more robust demo path, and a built-in narrative arc. Solution B is the better startup pitch but the riskier 48-hour build.
+
+---
+
+## Actual Implementation
+
+The built system ("Medak") most closely resembles **Solution 1 (Voice Bridge Pipeline)** from `p09-emergency-solutions.md`, not either solution scored above. It uses 2 agents (User Agent + Dispatch Agent) with a deterministic Python orchestrator, achieving the pipeline architecture's clarity without the complexity of the 5-agent Rehearse-Then-Call approach.

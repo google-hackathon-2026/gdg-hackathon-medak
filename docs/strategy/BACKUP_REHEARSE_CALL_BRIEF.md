@@ -2,6 +2,16 @@
 
 > **Solution Score: 34/40 GREEN | Combined: 66/80 | Status: BACKUP — deploy if top 2 blocked**
 
+> **[POST-HACKATHON UPDATE]** This 5-agent "Rehearse-Then-Call" architecture was the pre-hackathon backup plan for P09. The team built a significantly simpler architecture as **Medak**:
+> - **2 agents** (User Agent + Dispatch Agent), not 5
+> - **Deterministic Python orchestrator** (no LLM in phase transitions)
+> - **No rehearsal phase** — passive mic/camera triage for up to 10s, then calls directly
+> - **Gemini 2.0 Flash Live** (not Gemini 2.5 Flash)
+> - **React Native / Expo** (not Android Kotlin/Flutter)
+> - **Confidence-based dispatch trigger** (0.85 threshold or 10s timeout)
+>
+> See `medak/docs/design-document.md` for the actual architecture.
+
 ---
 
 ## 1. Why This Is the #3 Backup

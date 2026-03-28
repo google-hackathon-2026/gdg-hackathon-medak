@@ -48,5 +48,8 @@ Select the winner. Build it.
 ---
 
 ## Current Status
-- Phase 1 in progress: 5 landscape research agents running
-- Next: Parse research → extract discrete problems → score
+- All 4 phases complete.
+- Phase 1 (Discovery): 12+ problems identified across disability landscape.
+- Phase 2 (Scoring): 10 problems scored; 4 GREEN. See `PROBLEM_SCOREBOARD.md`.
+- Phase 3 (Solution Discovery): 5 solution architectures for P09. See `docs/solutions/`.
+- Phase 4 (Pick & Build): **P09 selected. Built as "Medak."** See `medak/docs/design-document.md`.

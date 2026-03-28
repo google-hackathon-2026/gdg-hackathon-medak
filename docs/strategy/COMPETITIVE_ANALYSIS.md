@@ -2,8 +2,10 @@
 
 **Theme:** "AI for All — Bridging the Accessibility Gap"  
 **Sponsor:** Google (GDG Belgrade)  
-**Our Project:** Cocoon — Autism Meltdown Prediction  
+**Our Project:** Medak — Emergency Relay for Deaf/Speech-Impaired (originally explored as "Cocoon" for autism meltdown prediction)
 **Date:** March 2026
+
+> **[POST-HACKATHON UPDATE]** This competitive analysis was written when the team was planning to build P11 "Cocoon" (autism meltdown prediction). The team ultimately pivoted to **P09 "Medak"** — an AI emergency relay system for deaf/speech-impaired people. Sections 1-3 (cliche landscape, honorable mentions, tech stacks) remain fully applicable regardless of project choice. Sections 4-8 are Cocoon-specific strategy that was not used; they are preserved below for research value. For Medak's actual architecture, see `medak/docs/design-document.md`.
 
 ---
 
@@ -84,6 +86,8 @@ Based on it being a Google-sponsored GDG event:
 **Key insight:** Most teams will build a **web app that calls the Gemini API** and wraps it in a nice UI. The Gemini API call IS their entire project. They'll spend 20 hours on UI and 2 hours on the actual AI integration.
 
 ---
+
+> **[NOTE]** Sections 4-8 below describe the Cocoon/P11 positioning strategy. The team built Medak/P09 instead. This content is preserved as pre-hackathon research.
 
 ## 4. What Makes "Cocoon" Stand Out vs. The Crowd
 
