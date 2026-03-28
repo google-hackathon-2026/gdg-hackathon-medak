@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medak — Architecture Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,15,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 14px 32px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; color: #888;
+  }
+  .breadcrumb span { cursor: pointer; transition: color .2s; }
+  .breadcrumb span:hover { color: #fff; }
+  .breadcrumb span.active { color: #dc2626; font-weight: 600; }
+  .breadcrumb .sep { color: #444; cursor: default; }
+
+  /* ── Hero ── */
+  .hero {
+    text-align: center; padding: 80px 32px 48px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(220,38,38,0.08) 0%, transparent 60%);
+  }
+  .hero h1 { font-size: 48px; font-weight: 800; letter-spacing: -1.5px; color: #fff; }
+  .hero h1 .accent { color: #dc2626; }
+  .hero .subtitle { font-size: 18px; color: #999; margin-top: 12px; max-width: 640px; margin-inline: auto; line-height: 1.6; }
+
+  /* ── Level indicator ── */
+  .level-bar {
+    display: flex; justify-content: center; gap: 6px; padding: 24px 32px 0;
+  }
+  .level-pip {
+    width: 48px; height: 5px; border-radius: 3px; background: #222;
+    cursor: pointer; transition: all .3s;
+  }
+  .level-pip.active { background: #dc2626; }
+  .level-pip:hover { background: #555; }
+  .level-labels {
+    display: flex; justify-content: center; gap: 6px; padding: 8px 32px 32px;
+    font-size: 11px; color: #666;
+  }
+  .level-labels span { width: 48px; text-align: center; cursor: pointer; }
+  .level-labels span.active { color: #dc2626; font-weight: 600; }
+
+  /* ── Sections ── */
+  .section {
+    max-width: 1100px; margin: 0 auto; padding: 0 32px 64px;
+    display: none;
+    animation: fadeIn .4s ease;
+  }
+  .section.visible { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+  .section h2 {
+    font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .section .section-sub { font-size: 15px; color: #888; margin-bottom: 32px; line-height: 1.5; }
+
+  /* ── Cards ── */
+  .card-grid { display: grid; gap: 16px; }
+  .card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .card-grid.cols-1 { grid-template-columns: 1fr; }
+  @media (max-width: 768px) { .card-grid.cols-2, .card-grid.cols-3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: #141419; border: 1px solid #1e1e28; border-radius: 12px;
+    padding: 24px; transition: all .25s;
+  }
+  .card:hover { border-color: #333; transform: translateY(-2px); }
+  .card.clickable { cursor: pointer; }
+  .card.clickable:hover { border-color: #dc2626; box-shadow: 0 0 24px rgba(220,38,38,0.08); }
+  .card .card-icon { font-size: 28px; margin-bottom: 12px; }
+  .card h3 { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+  .card p { font-size: 13.5px; color: #999; line-height: 1.55; }
+  .card .tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 4px; margin-top: 10px;
+    background: rgba(220,38,38,0.12); color: #f87171;
+  }
+  .card .tag.green { background: rgba(34,197,94,0.12); color: #4ade80; }
+  .card .tag.blue { background: rgba(59,130,246,0.12); color: #60a5fa; }
+  .card .tag.yellow { background: rgba(234,179,8,0.12); color: #facc15; }
+  .card .tag.purple { background: rgba(168,85,247,0.12); color: #c084fc; }
+
+  /* ── Flow diagram ── */
+  .flow {
+    display: flex; align-items: stretch; gap: 0; margin: 32px 0;
+    overflow-x: auto; padding-bottom: 8px;
+  }
+  .flow-step {
+    flex: 1; min-width: 160px; padding: 20px 16px; text-align: center;
+    border-radius: 10px; position: relative; transition: all .3s;
+  }
+  .flow-step:hover { transform: scale(1.03); }
+  .flow-arrow {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; color: #444; min-width: 36px;
+  }
+  .flow-step .step-num {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    margin-bottom: 6px; opacity: 0.7;
+  }
+  .flow-step h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .flow-step p { font-size: 12px; line-height: 1.45; }
+  .flow-step.intake { background: #1a1a2e; color: #a5b4fc; border: 1px solid #2a2a4e; }
+  .flow-step.triage { background: #1e293b; color: #93c5fd; border: 1px solid #2e3a5e; }
+  .flow-step.live { background: #1c1917; color: #fbbf24; border: 1px solid #3a2f1c; }
+  .flow-step.resolved { background: #0a2e0a; color: #4ade80; border: 1px solid #1a4a1a; }
+  .flow-step.failed { background: #2e0a0a; color: #f87171; border: 1px solid #4a1a1a; }
+
+  /* ── Detail blocks ── */
+  .detail-block {
+    background: #111116; border: 1px solid #1e1e28; border-radius: 10px;
+    padding: 24px; margin-bottom: 16px;
+  }
+  .detail-block h4 { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+  .detail-block table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .detail-block th { text-align: left; color: #888; font-weight: 500; padding: 6px 12px 6px 0; border-bottom: 1px solid #1e1e28; }
+  .detail-block td { padding: 8px 12px 8px 0; border-bottom: 1px solid #111; color: #ccc; vertical-align: top; }
+  .detail-block td code { background: #1a1a22; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #f87171; }
+  .detail-block ul { list-style: none; padding: 0; }
+  .detail-block ul li { padding: 5px 0; font-size: 13px; color: #bbb; }
+  .detail-block ul li::before { content: "→ "; color: #dc2626; font-weight: 600; }
+
+  /* ── Architecture SVG diagram ── */
+  .arch-diagram {
+    background: #0d0d14; border: 1px solid #1a1a28; border-radius: 14px;
+    padding: 32px; margin: 24px 0; overflow-x: auto;
+  }
+  .arch-diagram svg { display: block; margin: 0 auto; }
+
+  /* ── Confidence formula ── */
+  .formula-box {
+    background: #0f0f18; border: 1px solid #1e1e30; border-radius: 10px;
+    padding: 20px 24px; font-family: 'Courier New', monospace;
+    font-size: 13px; line-height: 2; color: #93c5fd;
+    margin: 16px 0;
+  }
+  .formula-box .val { color: #4ade80; font-weight: 700; }
+  .formula-box .field { color: #fbbf24; }
+
+  /* ── Nav buttons ── */
+  .nav-row {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1100px; margin: 0 auto; padding: 0 32px 64px;
+  }
+  .nav-btn {
+    background: #141419; border: 1px solid #2a2a38; border-radius: 8px;
+    padding: 12px 24px; color: #ccc; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: all .2s; font-family: inherit;
+  }
+  .nav-btn:hover { border-color: #dc2626; color: #fff; }
+  .nav-btn:disabled { opacity: 0.3; cursor: default; border-color: #1e1e28; }
+
+  /* ── Misc ── */
+  .highlight { color: #dc2626; font-weight: 600; }
+  .mono { font-family: 'Courier New', monospace; font-size: 12px; color: #f87171; }
+  .spacer { height: 24px; }
+  .divider { border: none; border-top: 1px solid #1a1a24; margin: 32px 0; }
+
+  /* ── Sequence diagram ── */
+  .seq-container { overflow-x: auto; padding: 8px 0; }
+  .seq-diagram {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+    min-width: 600px;
+  }
+  .seq-lane {
+    font-size: 11px; font-weight: 600; color: #888;
+    padding: 10px 8px; border-right: 2px solid #1e1e28;
+    display: flex; align-items: center;
+  }
+  .seq-event {
+    padding: 10px 16px; font-size: 12.5px; color: #ccc;
+    border-bottom: 1px solid #111;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .seq-event .seq-arrow { color: #dc2626; font-weight: 700; font-size: 14px; }
+  .seq-event .seq-msg { background: #1a1a28; padding: 4px 10px; border-radius: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb" id="breadcrumb">
+  <span onclick="goTo(0)" id="bc-0" class="active">Overview</span>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>🚨 <span class="accent">Medak</span> Architecture Guide</h1>
+  <p class="subtitle">AI-powered emergency relay for deaf and speech-impaired people. Two Gemini Live agents observe your environment, build an emergency profile, then call 112 on your behalf — no voice required.</p>
+</div>
+
+<!-- Level pips -->
+<div class="level-bar" id="level-bar"></div>
+<div class="level-labels" id="level-labels"></div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LEVEL 0 — THE BIG PICTURE                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section visible" id="level-0">
+  <h2>The Big Picture</h2>
+  <p class="section-sub">What Medak does in one sentence: a deaf person presses an SOS button → AI observes their situation via phone mic + camera → builds a structured emergency packet → calls 112 with a clear voice on their behalf → help arrives.</p>
+
+  <div class="card-grid cols-3">
+    <div class="card clickable" onclick="goTo(1)">
+      <div class="card-icon">📱</div>
+      <h3>Mobile App</h3>
+      <p>React Native (Expo) app with a giant SOS button, fall detection, and real-time session UI showing what the AI is doing.</p>
+      <span class="tag blue">Frontend</span>
+    </div>
+    <div class="card clickable" onclick="goTo(2)">
+      <div class="card-icon">🧠</div>
+      <h3>AI Orchestration</h3>
+      <p>FastAPI backend with a deterministic state machine coordinating two Gemini Live agents — one watches you, one talks to 112.</p>
+      <span class="tag">Backend</span>
+    </div>
+    <div class="card clickable" onclick="goTo(3)">
+      <div class="card-icon">📞</div>
+      <h3>Emergency Call</h3>
+      <p>Twilio VoIP places the actual call. The Dispatch Agent speaks Serbian to the operator using your structured data.</p>
+      <span class="tag yellow">Telecom</span>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <!-- Core Flow -->
+  <h2>Session Lifecycle</h2>
+  <p class="section-sub">Every emergency follows this exact 4-phase pipeline. The orchestrator is deterministic — no LLM decides phase transitions.</p>
+
+  <div class="flow">
+    <div class="flow-step intake">
+      <div class="step-num">PHASE 1</div>
+      <h4>INTAKE</h4>
+      <p>&lt; 2 seconds<br>GPS captured, session created in Redis</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step triage">
+      <div class="step-num">PHASE 2</div>
+      <h4>TRIAGE</h4>
+      <p>Up to 10s<br>User Agent observes mic + camera, fills emergency fields</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step live">
+      <div class="step-num">PHASE 3</div>
+      <h4>LIVE CALL</h4>
+      <p>Variable<br>Dispatch Agent calls 112, speaks structured brief</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step resolved">
+      <div class="step-num">PHASE 4</div>
+      <h4>RESOLVED</h4>
+      <p>Terminal<br>Help confirmed, ETA displayed</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: -8px;">
+    <span style="font-size:12px; color:#666;">If all retries fail →</span>
+    <span style="display:inline-block; background:#2e0a0a; color:#f87171; font-size:12px; padding:4px 12px; border-radius:6px; border:1px solid #4a1a1a;">FAILED — SMS fallback with GPS + emergency type</span>
+  </div>
+
+  <div class="spacer"></div>
+
+  <!-- Two agents visual -->
+  <h2>The Two-Agent Architecture</h2>
+  <p class="section-sub">The core innovation: two Gemini 2.0 Flash Live agents share a Redis-backed EmergencySnapshot and coordinate through it — not by talking to each other directly.</p>
+
+  <div class="arch-diagram">
+    <svg width="820" height="380" viewBox="0 0 820 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Phone -->
+      <rect x="20" y="100" width="120" height="200" rx="16" stroke="#555" stroke-width="2" fill="#111"/>
+      <text x="80" y="80" text-anchor="middle" fill="#999" font-size="12" font-weight="600">PHONE</text>
+      <text x="80" y="170" text-anchor="middle" fill="#dc2626" font-size="28">🆘</text>
+      <text x="80" y="200" text-anchor="middle" fill="#aaa" font-size="11">SOS Button</text>
+      <text x="80" y="225" text-anchor="middle" fill="#666" font-size="10">Mic + Camera</text>
+      <text x="80" y="245" text-anchor="middle" fill="#666" font-size="10">GPS + Haptics</text>
+      <text x="80" y="265" text-anchor="middle" fill="#666" font-size="10">Fall Detection</text>
+
+      <!-- Arrow phone → backend -->
+      <line x1="140" y1="200" x2="210" y2="200" stroke="#444" stroke-width="1.5" stroke-dasharray="4"/>
+      <text x="175" y="190" text-anchor="middle" fill="#666" font-size="9">WebSocket</text>
+
+      <!-- Backend box -->
+      <rect x="210" y="50" width="200" height="300" rx="12" stroke="#dc2626" stroke-width="2" fill="#0d0d18" opacity="0.9"/>
+      <text x="310" y="36" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="700">BACKEND (FastAPI)</text>
+
+      <!-- Orchestrator -->
+      <rect x="230" y="70" width="160" height="40" rx="8" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      <text x="310" y="95" text-anchor="middle" fill="#a5b4fc" font-size="11" font-weight="600">Orchestrator (FSM)</text>
+
+      <!-- User Agent -->
+      <rect x="230" y="130" width="160" height="60" rx="8" fill="#1e293b" stroke="#2e3a5e" stroke-width="1"/>
+      <text x="310" y="152" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="600">User Agent</text>
+      <text x="310" y="168" text-anchor="middle" fill="#6b8abb" font-size="9">Gemini Live · Passive Triage</text>
+      <text x="310" y="182" text-anchor="middle" fill="#6b8abb" font-size="9">Observes mic + camera</text>
+
+      <!-- Dispatch Agent -->
+      <rect x="230" y="210" width="160" height="60" rx="8" fill="#1c1917" stroke="#3a2f1c" stroke-width="1"/>
+      <text x="310" y="232" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">Dispatch Agent</text>
+      <text x="310" y="248" text-anchor="middle" fill="#a89050" font-size="9">Gemini Live · Speaks to 112</text>
+      <text x="310" y="262" text-anchor="middle" fill="#a89050" font-size="9">Reads snapshot, answers Qs</text>
+
+      <!-- Snapshot -->
+      <rect x="230" y="290" width="160" height="40" rx="8" fill="#0a2e0a" stroke="#1a4a1a" stroke-width="1"/>
+      <text x="310" y="315" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600">EmergencySnapshot</text>
+
+      <!-- Arrow to Redis -->
+      <line x1="310" y1="330" x2="310" y2="362" stroke="#4ade80" stroke-width="1.5"/>
+      <rect x="268" y="355" width="84" height="24" rx="6" fill="#111" stroke="#333" stroke-width="1"/>
+      <text x="310" y="371" text-anchor="middle" fill="#f87171" font-size="10" font-weight="600">Redis</text>
+
+      <!-- Arrow backend → Twilio -->
+      <line x1="410" y1="240" x2="490" y2="240" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4"/>
+      <text x="450" y="230" text-anchor="middle" fill="#666" font-size="9">VoIP</text>
+
+      <!-- Twilio -->
+      <rect x="490" y="200" width="130" height="80" rx="12" stroke="#fbbf24" stroke-width="2" fill="#1c1917"/>
+      <text x="555" y="235" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="600">Twilio</text>
+      <text x="555" y="255" text-anchor="middle" fill="#a89050" font-size="10">Voice SDK</text>
+      <text x="555" y="270" text-anchor="middle" fill="#a89050" font-size="9">SIP → PSTN</text>
+
+      <!-- Arrow Twilio → 112 -->
+      <line x1="620" y1="240" x2="680" y2="240" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4"/>
+      <text x="650" y="230" text-anchor="middle" fill="#666" font-size="9">PSTN</text>
+
+      <!-- 112 Dispatcher -->
+      <rect x="680" y="180" width="130" height="120" rx="12" stroke="#f87171" stroke-width="2" fill="#2e0a0a"/>
+      <text x="745" y="220" text-anchor="middle" fill="#fff" font-size="28">👩‍🚒</text>
+      <text x="745" y="250" text-anchor="middle" fill="#f87171" font-size="13" font-weight="600">112 Operator</text>
+      <text x="745" y="268" text-anchor="middle" fill="#a55" font-size="10">Hears normal voice</text>
+      <text x="745" y="283" text-anchor="middle" fill="#a55" font-size="10">Dispatches help</text>
+
+      <!-- Q&A loop label -->
+      <path d="M390 155 Q440 100 390 235" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="3"/>
+      <text x="448" y="148" fill="#888" font-size="9" font-weight="500">Q&amp;A loop via</text>
+      <text x="448" y="160" fill="#888" font-size="9" font-weight="500">shared snapshot</text>
+    </svg>
+  </div>
+
+  <div class="card-grid cols-1">
+    <div class="card">
+      <h3>How the agents coordinate (without talking to each other)</h3>
+      <p>The User Agent writes fields to the EmergencySnapshot (emergency_type, consciousness, breathing, etc.). The Dispatch Agent reads from it. When the 112 operator asks a question the Dispatch Agent can't answer, it writes the question to <code style="background:#1a1a22;padding:2px 6px;border-radius:4px;font-size:12px;color:#fbbf24;">dispatch_questions[]</code> in the snapshot. The User Agent polls for pending questions, asks the user (or infers from environment), and writes the answer to <code style="background:#1a1a22;padding:2px 6px;border-radius:4px;font-size:12px;color:#4ade80;">ua_answers[]</code>. The Dispatch Agent picks it up and relays to the operator. Target round-trip: &lt; 5 seconds.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LEVEL 1 — FRONTEND DEEP DIVE              -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section" id="level-1">
+  <h2>📱 Frontend — React Native (Expo)</h2>
+  <p class="section-sub">Four screens, file-based routing via Expo Router. The entire UI is designed for panic situations: huge tap targets, haptic feedback, no reading required.</p>
+
+  <div class="card-grid cols-2">
+    <div class="card">
+      <div class="card-icon">🔴</div>
+      <h3>Home Screen <span class="mono">app/index.tsx</span></h3>
+      <p>A 200px SOS button that requires a 1.5-second press-and-hold to activate (prevents accidental triggers). Animated pulsing ring, haptic feedback. On trigger: grabs GPS, calls <code>POST /api/sos</code>, navigates to session screen.</p>
+      <span class="tag">Entry Point</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏥</div>
+      <h3>Session Screen <span class="mono">app/session.tsx</span></h3>
+      <p>The main emergency UI. Renders 5 different layouts depending on the current phase (INTAKE spinner → TRIAGE with transcript + confidence bar → LIVE_CALL with yellow "call in progress" banner → RESOLVED green ✓ with ETA → FAILED red ! with manual-call instructions).</p>
+      <span class="tag blue">Core UI</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚠️</div>
+      <h3>Alarm Screen <span class="mono">app/alarm.tsx</span></h3>
+      <p>Full-screen modal triggered by fall/shake detection. Pulsing red background, large countdown timer. Auto-calls SOS when countdown hits zero. Giant cancel button for false alarms.</p>
+      <span class="tag yellow">Safety</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚙️</div>
+      <h3>Settings <span class="mono">app/settings.tsx</span></h3>
+      <p>User profile (name, address, disability type, medical notes). Danger detection toggles (fall detection, shake SOS) with sensitivity options. Data auto-sent with every SOS.</p>
+      <span class="tag green">Config</span>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>Frontend Services</h2>
+  <p class="section-sub">The <code>lib/</code> folder contains the real engine — WebSocket management, audio/video capture, GPS, and sensor monitoring.</p>
+
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>WebSocket <span class="mono">lib/websocket.ts</span></h3>
+      <p><strong>Client → Server:</strong> audio chunks (base64 PCM), video frames (base64 JPEG), user tap/text responses, ping keepalives (15s).</p>
+      <p style="margin-top:8px"><strong>Server → Client:</strong> transcripts, phase/confidence updates, user questions, RESOLVED (with ETA), FAILED, pong.</p>
+      <p style="margin-top:8px">Auto-reconnect with exponential backoff (2s, 4s, 8s), max 3 attempts.</p>
+    </div>
+    <div class="card">
+      <h3>Audio Capture <span class="mono">lib/audio.ts</span></h3>
+      <p>16kHz mono PCM via expo-av. Simulates streaming with sequential 250ms recordings: prepare → start → wait → stop → base64 encode → send via WS → delete file. Repeat.</p>
+    </div>
+    <div class="card">
+      <h3>Camera Capture <span class="mono">lib/camera.ts</span></h3>
+      <p>Hidden 1×1px CameraView capturing frames every 750ms (~1.3fps). JPEG quality 0.3 for bandwidth. Sent as base64 via WebSocket. Used for scene analysis (fire, accident, etc.).</p>
+    </div>
+    <div class="card">
+      <h3>Danger Detection <span class="mono">lib/useDangerDetection.ts</span></h3>
+      <p>Monitors accelerometer via expo-sensors. Detects rapid Z-axis drop (fall) and high-frequency vibration (shake SOS). Three sensitivity levels. Triggers alarm screen with countdown.</p>
+    </div>
+    <div class="card">
+      <h3>SOS Flow <span class="mono">lib/sosFlow.ts</span></h3>
+      <p>Orchestrates the trigger: requests GPS + user_id + device_id in parallel → fires <code>POST /api/sos</code> + reverse geocode simultaneously (address never blocks SOS) → returns session_id.</p>
+    </div>
+    <div class="card">
+      <h3>Location <span class="mono">lib/location.ts</span></h3>
+      <p>GPS with 10s timeout (balanced accuracy). Reverse geocoding with 2s timeout — extracts street + number + city. Always non-blocking: SOS fires even without address.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LEVEL 2 — BACKEND DEEP DIVE               -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section" id="level-2">
+  <h2>🧠 Backend — FastAPI + Gemini Live</h2>
+  <p class="section-sub">Five Python modules running on Python 3.13. The backend is the brain: it manages sessions, runs two AI agents, stores shared state in Redis, and bridges to Twilio for the actual call.</p>
+
+  <div class="card-grid cols-1">
+    <div class="card">
+      <h3>API Endpoints <span class="mono">main.py</span></h3>
+      <div class="detail-block" style="margin-top:12px">
+        <table>
+          <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+          <tr><td><code>POST</code></td><td><code>/api/sos</code></td><td>Create session → spawn orchestrator as async task</td></tr>
+          <tr><td><code>GET</code></td><td><code>/api/session/{id}/status</code></td><td>Poll current phase, confidence, call status, ETA</td></tr>
+          <tr><td><code>WSS</code></td><td><code>/api/session/{id}/ws</code></td><td>Real-time bidirectional stream (audio/video/responses ↔ transcripts/updates)</td></tr>
+          <tr><td><code>POST</code></td><td><code>/api/session/{id}/twilio/audio</code></td><td>Twilio audio polling endpoint (stub)</td></tr>
+          <tr><td><code>GET</code></td><td><code>/api/health</code></td><td>Health check + active session count</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>Orchestrator — The State Machine</h2>
+  <p class="section-sub"><span class="mono">orchestrator.py</span> — Fully deterministic. No LLM decides phase transitions. It just follows rules.</p>
+
+  <div class="flow">
+    <div class="flow-step intake">
+      <h4>INTAKE</h4>
+      <p>Create snapshot<br>Store GPS<br>Confidence: 0.20</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step triage">
+      <h4>TRIAGE</h4>
+      <p>Spawn User Agent<br>Poll confidence every 1s<br>Exit: ≥ 0.85 OR 10s elapsed</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step live">
+      <h4>LIVE_CALL</h4>
+      <p>Spawn Dispatch Agent<br>Monitor call_status<br>Retry up to 3× (2s, 4s, 8s)</p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step resolved">
+      <h4>RESOLVED</h4>
+      <p>call_status = CONFIRMED<br>ETA written<br>Broadcast to frontend</p>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>EmergencySnapshot — Shared State</h2>
+  <p class="section-sub"><span class="mono">snapshot.py</span> — The single source of truth. Both agents read/write here. Stored in Redis with 1-hour TTL.</p>
+
+  <div class="detail-block">
+    <h4>Key Fields</h4>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Who writes</th><th>Who reads</th></tr>
+      <tr><td><code>phase</code></td><td>Enum</td><td>Orchestrator</td><td>Everyone</td></tr>
+      <tr><td><code>location</code></td><td>{lat, lng, address, confirmed}</td><td>Frontend / User Agent</td><td>Dispatch Agent</td></tr>
+      <tr><td><code>emergency_type</code></td><td>MEDICAL|FIRE|POLICE|GAS|OTHER</td><td>User Agent</td><td>Dispatch Agent</td></tr>
+      <tr><td><code>conscious</code> / <code>breathing</code></td><td>bool?</td><td>User Agent</td><td>Dispatch Agent</td></tr>
+      <tr><td><code>victim_count</code></td><td>int?</td><td>User Agent</td><td>Dispatch Agent</td></tr>
+      <tr><td><code>dispatch_questions</code></td><td>str[]</td><td>Dispatch Agent</td><td>User Agent</td></tr>
+      <tr><td><code>ua_answers</code></td><td>str[]</td><td>User Agent</td><td>Dispatch Agent</td></tr>
+      <tr><td><code>confidence_score</code></td><td>float 0–1</td><td>Computed on write</td><td>Orchestrator</td></tr>
+      <tr><td><code>call_status</code></td><td>IDLE→DIALING→CONNECTED→CONFIRMED|DROPPED</td><td>Dispatch Agent</td><td>Orchestrator</td></tr>
+      <tr><td><code>eta_minutes</code></td><td>int?</td><td>Dispatch Agent</td><td>Frontend</td></tr>
+    </table>
+  </div>
+
+  <div class="formula-box">
+    <strong style="color:#fff;">Confidence Score (deterministic, no LLM):</strong><br>
+    <span class="field">location.confirmed</span> → <span class="val">+0.35</span> &nbsp;|&nbsp; <span class="field">location (GPS only)</span> → <span class="val">+0.20</span><br>
+    <span class="field">emergency_type</span> → <span class="val">+0.25</span><br>
+    <span class="field">conscious</span> → <span class="val">+0.15</span> &nbsp;|&nbsp; <span class="field">breathing</span> → <span class="val">+0.15</span><br>
+    <span class="field">victim_count</span> → <span class="val">+0.10</span><br>
+    <span class="field">user_input</span> → <span class="val">+0.05 × min(count, 2)</span><br>
+    ──────────────────────────<br>
+    Threshold to trigger call: <span class="val" style="font-size:15px;">≥ 0.85</span> &nbsp;or&nbsp; <span class="val">10s timeout</span>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>The Two Agents</h2>
+
+  <div class="card-grid cols-2">
+    <div class="card" style="border-color:#2e3a5e">
+      <h3 style="color:#93c5fd">User Agent <span class="mono">user_agent.py</span></h3>
+      <p>Gemini 2.0 Flash Live session. <strong>Passive triage</strong> — observes mic + camera, never requires user input. Speaks Serbian.</p>
+      <div class="detail-block" style="margin-top:12px">
+        <h4>8 Tool Calls</h4>
+        <ul>
+          <li><code>confirm_location(address)</code> — marks location confirmed (+0.35)</li>
+          <li><code>set_emergency_type(type)</code> — biggest confidence jump (+0.25)</li>
+          <li><code>set_clinical_fields(conscious?, breathing?, count?)</code></li>
+          <li><code>append_free_text(utterance)</code> — raw user speech for context</li>
+          <li><code>get_pending_dispatch_question()</code> — polls for operator Qs</li>
+          <li><code>answer_dispatch_question(q, a)</code> — replies to operator</li>
+          <li><code>surface_user_question(q)</code> — shows YES/NO on UI (max 1, auto-dismiss 5s)</li>
+          <li><code>record_user_input(type, value)</code> — stores tap/text from UI</li>
+        </ul>
+      </div>
+      <span class="tag blue">Gemini Live · TEXT mode</span>
+    </div>
+    <div class="card" style="border-color:#3a2f1c">
+      <h3 style="color:#fbbf24">Dispatch Agent <span class="mono">dispatch_agent.py</span></h3>
+      <p>Gemini 2.0 Flash Live session. <strong>Speaks to 112 operator</strong> via Twilio VoIP. First sentence always identifies as automated relay.</p>
+      <div class="detail-block" style="margin-top:12px">
+        <h4>5 Tool Calls</h4>
+        <ul>
+          <li><code>get_emergency_brief()</code> — reads snapshot, returns formatted brief</li>
+          <li><code>queue_question_for_user(q)</code> — asks user via User Agent</li>
+          <li><code>get_user_answer(q)</code> — polls for answer (returns PENDING if waiting)</li>
+          <li><code>update_call_status(status)</code> — DIALING→CONNECTED→DROPPED</li>
+          <li><code>confirm_dispatch(eta)</code> — CONFIRMED + ETA → triggers RESOLVED</li>
+        </ul>
+      </div>
+      <span class="tag yellow">Gemini Live · AUDIO+TEXT mode</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LEVEL 3 — CALL FLOW + TELECOM             -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section" id="level-3">
+  <h2>📞 The Emergency Call — End to End</h2>
+  <p class="section-sub">Zooming into exactly what happens from SOS press to "Help is on the way." This is the critical path.</p>
+
+  <div class="detail-block">
+    <h4>Full Sequence</h4>
+    <table>
+      <tr><th style="width:50px">T+</th><th style="width:120px">Actor</th><th>Action</th></tr>
+      <tr><td><code>0s</code></td><td>📱 User</td><td>Press-and-hold SOS for 1.5s → haptic confirmation</td></tr>
+      <tr><td><code>0s</code></td><td>📱 App</td><td>Parallel: request GPS + get user_id + get device_id</td></tr>
+      <tr><td><code>~1s</code></td><td>📱 App</td><td>Parallel: <code>POST /api/sos {lat,lng,user_id,device_id}</code> + reverse geocode (2s timeout, non-blocking)</td></tr>
+      <tr><td><code>~1s</code></td><td>🧠 Backend</td><td>Create EmergencySnapshot in Redis (confidence: 0.20), phase → INTAKE</td></tr>
+      <tr><td><code>~2s</code></td><td>🧠 Orchestrator</td><td>Phase → TRIAGE. Spawn User Agent (Gemini Live session)</td></tr>
+      <tr><td><code>2–10s</code></td><td>🤖 User Agent</td><td>Receives mic audio (250ms chunks) + camera frames (1.3fps). Passively infers: emergency type, consciousness, breathing, victim count. Calls tools to write to snapshot.</td></tr>
+      <tr><td><code>~5s</code></td><td>🤖 User Agent</td><td>May surface one YES/NO question on UI (e.g. "Confirm: medical emergency?")</td></tr>
+      <tr><td><code>~8s</code></td><td>🧠 Orchestrator</td><td>Confidence hits 0.85 (or 10s timeout). Phase → LIVE_CALL</td></tr>
+      <tr><td><code>~8s</code></td><td>📞 Twilio</td><td>VoIP call initiated to emergency number via SIP → PSTN</td></tr>
+      <tr><td><code>~12s</code></td><td>🤖 Dispatch Agent</td><td>Operator answers. Agent: "Ovo je automatski hitan poziv u ime osobe koja ne može da govori. Imam detalje hitnog slučaja."</td></tr>
+      <tr><td><code>~15s</code></td><td>🤖 Dispatch Agent</td><td>Calls <code>get_emergency_brief()</code> → speaks structured brief: type, address, victim count, consciousness, breathing</td></tr>
+      <tr><td><code>~20s</code></td><td>👩‍🚒 Operator</td><td>Asks follow-up question (e.g. "Is the patient bleeding?")</td></tr>
+      <tr><td><code>~20s</code></td><td>🤖 Dispatch Agent</td><td>Doesn't know → calls <code>queue_question_for_user("Da li pacijent krvari?")</code></td></tr>
+      <tr><td><code>~21s</code></td><td>🤖 User Agent</td><td>Polls <code>get_pending_dispatch_question()</code>, gets question, infers from camera or surfaces to user</td></tr>
+      <tr><td><code>~24s</code></td><td>🤖 User Agent</td><td>Calls <code>answer_dispatch_question("Da li pacijent krvari?", "Ne, nema vidljivog krvarenja")</code></td></tr>
+      <tr><td><code>~25s</code></td><td>🤖 Dispatch Agent</td><td>Polls <code>get_user_answer()</code>, gets answer, relays to operator</td></tr>
+      <tr><td><code>~30s</code></td><td>👩‍🚒 Operator</td><td>"Šaljemo ekipu. Procenjeno vreme dolaska: 8 minuta."</td></tr>
+      <tr><td><code>~30s</code></td><td>🤖 Dispatch Agent</td><td>Calls <code>confirm_dispatch(eta_minutes=8)</code></td></tr>
+      <tr><td><code>~30s</code></td><td>🧠 Orchestrator</td><td>Sees call_status=CONFIRMED. Phase → RESOLVED. Broadcasts to frontend.</td></tr>
+      <tr><td><code>~30s</code></td><td>📱 App</td><td>Green screen: "Pomoć je na putu — ETA 8 min" + strong haptic burst</td></tr>
+    </table>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>Failure & Retry Logic</h2>
+  <div class="card-grid cols-2">
+    <div class="card" style="border-color:#4a1a1a">
+      <h3 style="color:#f87171">Call Failures</h3>
+      <p>If call_status becomes DROPPED, orchestrator retries the Dispatch Agent up to 3 times with exponential backoff: 2s → 4s → 8s. Each retry creates a fresh Gemini Live session and re-reads the snapshot.</p>
+    </div>
+    <div class="card" style="border-color:#4a1a1a">
+      <h3 style="color:#f87171">Final Fallback</h3>
+      <p>After 3 failed attempts: phase → FAILED. System sends SMS with GPS coordinates + emergency type to 112. Frontend shows: "Automatski poziv nije uspeo. Zamolite nekoga da pozove 112."</p>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <h2>Infrastructure</h2>
+  <div class="card-grid cols-3">
+    <div class="card">
+      <h3>Docker Compose</h3>
+      <p>3 services: Redis 7 (state), Backend (FastAPI on 8080), Demo Dispatch (simulated 112 on 8001). Single <code>docker-compose up</code>.</p>
+    </div>
+    <div class="card">
+      <h3>GCP Deployment</h3>
+      <p>Cloud Run: min=0, max=1, 256Mi RAM. Uses Vertex AI for Gemini. GitHub Actions CI/CD with <code>GCP_SA_KEY</code> secret.</p>
+    </div>
+    <div class="card">
+      <h3>Safety Guardrails</h3>
+      <p>Config validator <strong>rejects</strong> real 112/194 as emergency number. Only team member phones allowed. Session data: 1hr TTL, no persistent storage.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Nav -->
+<div class="nav-row">
+  <button class="nav-btn" id="prev-btn" onclick="prev()" disabled>← Previous level</button>
+  <button class="nav-btn" id="next-btn" onclick="next()">Next level →</button>
+</div>
+
+<script>
+const levels = [
+  { id: 'level-0', label: 'Overview', crumb: 'Overview' },
+  { id: 'level-1', label: 'Frontend', crumb: 'Frontend Deep Dive' },
+  { id: 'level-2', label: 'Backend', crumb: 'Backend Deep Dive' },
+  { id: 'level-3', label: 'Call Flow', crumb: 'Call Flow & Infra' },
+];
+
+let current = 0;
+
+function render() {
+  // Sections
+  levels.forEach((l, i) => {
+    document.getElementById(l.id).classList.toggle('visible', i === current);
+  });
+
+  // Pips
+  const bar = document.getElementById('level-bar');
+  const labels = document.getElementById('level-labels');
+  bar.innerHTML = levels.map((l, i) =>
+    `<div class="level-pip ${i === current ? 'active' : ''}" onclick="goTo(${i})"></div>`
+  ).join('');
+  labels.innerHTML = levels.map((l, i) =>
+    `<span class="${i === current ? 'active' : ''}" onclick="goTo(${i})">${l.label}</span>`
+  ).join('');
+
+  // Breadcrumb
+  const bc = document.getElementById('breadcrumb');
+  let html = '';
+  for (let i = 0; i <= current; i++) {
+    if (i > 0) html += '<span class="sep">›</span>';
+    html += `<span onclick="goTo(${i})" class="${i === current ? 'active' : ''}">${levels[i].crumb}</span>`;
+  }
+  bc.innerHTML = html;
+
+  // Nav buttons
+  document.getElementById('prev-btn').disabled = current === 0;
+  document.getElementById('next-btn').disabled = current === levels.length - 1;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goTo(i) { current = i; render(); }
+function next() { if (current < levels.length - 1) { current++; render(); } }
+function prev() { if (current > 0) { current--; render(); } }
+
+render();
+</script>
+</body>
+</html>
