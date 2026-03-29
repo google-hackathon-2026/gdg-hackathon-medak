@@ -123,7 +123,7 @@ Grants fund the **first 12-18 months** while government procurement cycles play 
 
 | Grant Program | Amount | Fit | Timeline |
 |---------------|--------|-----|----------|
-| **Serbian Innovation Fund** | €50–200K | Direct fit — Serbian startup, accessibility tech. Precedent: TransportSign funded. | 3–6 months |
+| **Serbian Innovation Fund** | €50–200K | Direct fit — Serbian startup, accessibility tech. **Precedent: SignAvatar (sign language on Srbijavoz app) already funded.** GovTech program explicitly lists "inkluzija i pristupačnost." Catalytic Co-Investment: up to €200K for AI companies. Smart Start: up to ~€46K for MVP teams of 2-5. | 3–6 months |
 | **Google.org Impact Challenge** | $100K–$2M | AI for social good, accessibility, emergency services. GDG hackathon = Google ecosystem alignment. | 6–12 months |
 | **Horizon Europe** (HORIZON-CL2-2025-01-TRANSFO-09) | Up to €3.4M | "Autonomy of persons with disabilities" — direct match. Deadline: Sep 2025. Requires EU consortium. | 12–18 months |
 | **EU Innovation Fund** | €500K–€2.5M | Digital innovation for public services. Emergency accessibility = strong case. | 12–18 months |
@@ -236,7 +236,7 @@ PSAP Changes Required:      Zero
 |--------|-------|
 | **TAM** (Total Addressable Market) | €50–100M/year (EU + US + developed world) |
 | **SAM** (Serviceable) | €10–20M/year (EU countries with EAA mandate) |
-| **SOM** (Year 1–2) | €5–8M ARR (Serbia + 2–3 EU early-adopter pilots) |
+| **SOM** (Year 3–5) | €5–8M ARR (10-15 EU countries, established relationships) |
 | **Gross Margin** | 90–96% (SaaS with near-zero marginal cost) |
 | **LTV:CAC** | >20:1 (multi-year gov contracts, low churn) |
 | **Payback Period** | < 6 months per deal (low deployment cost) |

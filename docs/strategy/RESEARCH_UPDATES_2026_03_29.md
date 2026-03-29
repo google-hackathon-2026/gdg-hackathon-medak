@@ -133,7 +133,126 @@ Antioch Police Department approved $248,400 for Axon's "Prepared" AI platform �
 
 ---
 
-## 7. EUD — Key Reference for EU Deaf Population
+## 8. CRITICAL: Ukraine Launches Accessible 112 During War (March 12, 2026)
+
+**17 days ago**, Ukraine's Ministry of Internal Affairs updated the **112 Ukraine app** with:
+- **Video calls to 112 operators fluent in sign language** — deaf users can now call 112 via video
+- **Automatic geolocation transmission**
+- **326,000+ downloads**, 9,200+ emergency requests processed
+
+Minister Ihor Klymenko: *"This is important for people with hearing and speech impairments - they will be able to independently explain the situation and ask for help."*
+
+Ukraine was also invited to the European Parliament (December 2, 2025, hosted by EENA and MEP Grégory Allione) to share their accessible 112 innovations. Ukraine's Deputy Interior Minister Leonid Tymchenko presented how Ukraine has *"introduced advanced accessibility features, including video and sign-language services"* — while also being at war.
+
+**For the pitch — the devastating comparison:**
+- 🇺🇦 **Ukraine (at war):** Video + sign language 112 access ✅ (March 2026)
+- 🇪🇺 **Most EU countries (at peace):** Zero accessible 112 ❌
+- 🇷🇸 **Serbia (EU candidate):** Zero accessible 112 ❌
+
+**The scaling angle:** Ukraine's solution requires human operators fluent in sign language — expensive and limited. Medak's AI approach achieves the same goal (accessible 112) at 150× lower cost and unlimited scalability. Ukraine proves the NEED; Medak proves the SCALABLE solution.
+
+---
+
+## 9. CRITICAL: RTT Requires Full NG112 Migration First (June 2025)
+
+**Critical Communications Today** (June 2025) confirmed what EENA has been warning about: **countries cannot deploy native RTT without first implementing NG112 full-IP infrastructure**.
+
+> *"The catch is that member states cannot deploy RTT unless they introduce NG112, so they have to upgrade to full-IP communications and implement NGCS technology."*
+
+**What this means:**
+- NG112 = migrating all PSAPs from legacy TDM (circuit-switched telephony) to all-IP networks
+- Multi-year, multi-hundred-million-euro infrastructure project per country
+- As of Feb 2025: only **23 of 27 EU countries** even submitted a roadmap; **11 claimed NG112 migration by end 2024** (but "quite what this means is open to interpretation")
+- Most countries simply cannot meet the June 2027 RTT deadline without massive infrastructure investment
+
+**Why this matters for Medak:** The 2027 RTT deadline is structurally impossible for most EU countries. Medak doesn't need NG112, doesn't need IP PSAPs, doesn't need any infrastructure. We make a standard voice call. Comparing us to RTT is comparing apples to a multi-year infrastructure programme.
+
+**Source:** Critical Communications Today, June 2025; EENA 112 Day Recommendations, February 2025.
+
+---
+
+## 10. EENA Open Letter on Location Data Gap (April 2025)
+
+Signed by EENA + EDF + EBU (European Blind Union) + others. Called out:
+- Poland, Cyprus, Malta don't have AML (Advanced Mobile Location)
+- Many accessible 112 features (SMS, apps, relay services) **don't send caller location** — violates EECC
+- "Equivalent access" requirements explicitly demand caller location accuracy equal to regular calls
+
+**For Medak:** Our Twilio voice call inherits all standard AML infrastructure automatically. No SMS, no app that forgets to send location. We call 112 like a phone call — location comes with it.
+
+---
+
+## 12. EENA: 2G/3G Shutdown Creating Emergency Access Crisis (Dec 2025)
+
+EENA issued an urgent warning that "Europeans are increasingly unable to reach emergency services while roaming" due to smartphone incompatibilities with 4G/5G emergency calling after 2G/3G network shutdowns.
+
+**Key facts:**
+- In Australia, TPG confirmed a **fatal incident** where a Samsung device failed to connect to emergency services
+- Optus flagged up to **470,000 Samsung devices** potentially unable to make emergency calls
+- EENA warned the European Commission about this risk in **2022 and 2024** — both times ignored
+- EU operators preparing to shut down 2G/3G in **2026** — the crisis will worsen
+
+**Why this matters for Medak:** The emergency access gap is getting WORSE for everyone, not just deaf people. If hearing people are losing access from network changes, imagine the compounding impact on deaf people who never had access to begin with. This creates even more urgency for solutions that work regardless of network infrastructure.
+
+---
+
+## 9. Switzerland Modernizing Emergency Access for Deaf (June 2025)
+
+The Swiss Federal Council put text-based emergency access for hearing-impaired people into legislation (police, fire, medical emergency numbers). Even Switzerland — not an EU member — is acting on this.
+
+**For pitch context:** The global regulatory wave includes non-EU countries. Serbia as an EU candidate country will face the same pressure.
+
+---
+
+## 11. SignAvatar — Perfect Innovation Fund Precedent
+
+**SignAvatar** (product: TransportSign) is a Serbian startup funded by the Innovation Fund's GovTech program that uses **AI to translate speech into sign language** via 3D avatars based on motion-captured real deaf people.
+
+**Key facts:**
+- Founded 2023 by Djordje Dimitrijević + team from Matematička gimnazija
+- **Two co-founders from the deaf community** — authentic connection
+- Deployed on **Srbijavoz app** (Serbian Railways) and pilot at **Belgrade Nikola Tesla Airport**
+- Funded by: **Innovation Fund GovTech** + UNDP + StarTech (Philip Morris) — **triple-funded**
+- Microsoft Serbia provided cloud resources via Microsoft Garage program
+- **First in the world** to make public transport PA announcements available in sign language
+- Planning expansion to 20+ airports/railways in EU, Canada, US by 2027
+- Featured on **Forbes Serbia**
+
+**Why this matters for Medak Q&A:**
+- The Innovation Fund has a PROVEN track record of funding AI + accessibility + deaf community projects
+- GovTech program explicitly supports "inkluzija i pristupačnost" — Medak is a perfect fit
+- SignAvatar demonstrates Serbia's position as an innovator in deaf accessibility tech
+- Cross-sector collaboration model (Fund + UNDP + private sector) = potential model for Medak
+- If a judge asks "Is the Innovation Fund realistic?" → "They already funded SignAvatar, an AI sign language app that's now deployed on Serbian Railways and Belgrade Airport."
+
+**Source:** Innovation Fund website (inovacionifond.rs); Forbes Serbia; IT Logs interview.
+
+---
+
+## 14. Serbia EECC Accession Incentive (EU Commission, November 2025)
+
+The EU Commission's 2025 Serbia Enlargement Package (November 4, 2025) explicitly recommended:
+
+> *"Serbia should... align its legislation on electronic communications, digital trust, and cybersecurity with the EU's regulatory framework, including the Gigabit Infrastructure Act, eIDAS 2.0, the NIS2 Directive, and the **Artificial Intelligence Act**"*
+
+And more specifically for electronic communications:
+
+> *"align its legislation on electronic communications... with the EU regulatory framework, including the **EU Electronic Communications Code**"*
+
+**What this means for Medak:**
+- EECC = includes Article 109 on accessible 112 for deaf citizens
+- Serbia has opened 22/35 EU negotiating chapters; Cluster 3 (digital) is ready
+- EECC alignment is a **direct EC recommendation** for Serbia's accession process
+- Implementing Medak = demonstrable EECC compliance → accelerates Chapter 3 talks
+- The EC also specifically mentioned the **AI Act** — Medak is a high-risk AI use case that demonstrates responsible AI deployment (transparent, auditable FSM)
+
+**B2G pitch reinforcement:** "This isn't just accessibility — it's Serbia's EU accession deliverable. The European Commission explicitly asked Serbia to align with the EECC. Medak is how that happens for emergency communications."
+
+**Source:** European Commission, 2025 Serbia Enlargement Package, November 4, 2025 (europa.eu)
+
+---
+
+## 16. EUD — Key Reference for EU Deaf Population
 
 **EUD Report on EECC Implementation (June 2025):**
 - EECC "currently lacks specific provisions that address the unique communication needs of deaf people"

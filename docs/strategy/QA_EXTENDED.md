@@ -101,7 +101,7 @@ Before answering anything, remember the system as built:
 
 > "Ne još — i to je namerno deo dizajna. Medak ne zahteva saradnju sa 112 centrom. Operater prima normalan glasovni poziv — ne zna i ne mora da zna da je na drugoj strani AI agent. To je kao da vas prijatelj zove u vaše ime.
 >
-> Za pilot, planiramo partnerstvo sa MUP-om — Ministarstvom unutrašnjih poslova — verovatno kroz Fond za inovacionu delatnost ili EU grant. Fond je već finansirao sličan accessibility projekat — TransportSign. Ciklus je šest meseci.
+> Za pilot, planiramo partnerstvo sa MUP-om — Ministarstvom unutrašnjih poslova — verovatno kroz Fond za inovacionu delatnost ili EU grant. Fond je već finansirao sličan accessibility projekat — SignAvatar, aplikaciju za znakovni jezik na Srbijavozu. Ciklus je šest meseci.
 >
 > Za širi EU deployment, strategija je partnerstvo sa postojećim provajderima hitnih službi koji već imaju vladine ugovore. Mi obezbeđujemo tehnološki sloj, oni obezbeđuju distribuciju i regulatorne odnose.
 >
@@ -111,7 +111,7 @@ Before answering anything, remember the system as built:
 
 > "Not yet — and that's intentionally part of the design. Medak doesn't require 112 center cooperation. The operator receives a normal voice call — they don't know and don't need to know that an AI agent is on the other end. It's like having a friend call on your behalf.
 >
-> For a pilot, we plan to partner with MUP — the Serbian Ministry of Interior — likely through the Innovation Fund or an EU grant. The Fund has already financed a similar accessibility project — TransportSign. The cycle is six months.
+> For a pilot, we plan to partner with MUP — the Serbian Ministry of Interior — likely through the Innovation Fund or an EU grant. The Fund has already financed SignAvatar, an AI sign language app on Serbian Railways — direct precedent for accessibility and AI. The cycle is six months.
 >
 > For broader EU deployment, the strategy is partnering with existing emergency service providers who already have government contracts. We provide the technology layer, they provide distribution and regulatory relationships.
 >
@@ -119,7 +119,7 @@ Before answering anything, remember the system as built:
 
 ### 🎯 Delivery Notes
 - "Ne zahteva saradnju" is the key insight — reframe from weakness to design strength
-- Mentioning TransportSign shows you know the funding landscape
+- Mentioning SignAvatar shows you know the funding landscape — and it's a stronger precedent than a generic reference
 
 ---
 
@@ -176,6 +176,7 @@ Before answering anything, remember the system as built:
 ### 🎯 Delivery Notes
 - Reframe from absolute time to relative improvement
 - The "3-4 minute pickup time" stat is the killer comparison
+- **Bonus medical framing:** A peer-reviewed study published January 2026 (Johansen et al., PMC) shows cardiac arrest survival decreases **5-12% per minute** without treatment. A 5-minute earlier call improves survival from 47.7% to **68.6%**. For a deaf person who currently can't call at all — Medak doesn't just improve timing, it **restores** the survival probability they never had access to.
 
 ---
 
@@ -234,7 +235,9 @@ Before answering anything, remember the system as built:
 
 ### SR
 
-> "Za Srbiju — ne treba nam vladina nabavka. Srbija nije u EU, EECC se ne primenjuje direktno. Treba nam grant Fonda za inovacionu delatnost — ciklus je šest meseci — ili direktan pilot sa MUP-om. To je realistično unutar godinu dana.
+> "Za Srbiju — ne treba nam vladina nabavka. Ali postoji direktan regulatorni podsticaj koji mnogi ne znaju: Evropska komisija je u svom izveštaju o Srbiji za 2025. godinu eksplicitno preporučila da Srbija 'uskladi zakonodavstvo o elektronskim komunikacijama... sa EU regulatornim okvirom, uključujući EU Kodeks elektronskih komunikacija.' To je EECC. EECC uključuje člen 109 — pristupačnost 112 za gluva lica. Dakle, Medak nije samo dobra ideja za Srbiju — to je demonstracija EU usaglašenosti u okviru pristupnih pregovora, Klaster 3.
+>
+> Za finansiranje: Fond za inovacionu delatnost je već finansirao SignAvatar, aplikaciju za znakovni jezik na Srbijavozu — dakle, imaju jasan presedan za pristupačnost i AI. To je realistično unutar godinu dana.
 >
 > Za EU: ne pokušavamo da sami prođemo kroz proces javne nabavke u 27 država. Partnerstvo sa postojećim provajderima hitnih službi koji već imaju vladine ugovore. Mi obezbeđujemo tehnološki sloj — oni obezbeđuju distribuciju.
 >
@@ -244,7 +247,9 @@ Before answering anything, remember the system as built:
 
 ### EN
 
-> "For Serbia — we don't need government procurement. Serbia isn't in the EU, EECC doesn't apply directly. We need an Innovation Fund grant — six-month cycle — or a direct pilot with MUP. That's realistic within a year.
+> "For Serbia — there's actually a direct regulatory incentive most people miss: the EU Commission's 2025 Serbia Report explicitly recommends that Serbia 'align its legislation on electronic communications... with the EU regulatory framework, including the EU Electronic Communications Code.' That's the EECC. The EECC includes Article 109 — accessible 112 for deaf citizens. So Medak isn't just a good idea for Serbia — it's a demonstration of EU compliance progress in Chapter 3 accession negotiations.
+>
+> For funding: the Innovation Fund already funded SignAvatar, a sign language accessibility app on Serbian Railways — clear precedent for accessibility and AI. Realistic within a year.
 >
 > For EU: we're not trying to navigate government procurement in 27 countries ourselves. We'd partner with existing emergency service providers who already have government contracts. We provide the technology layer — they provide distribution.
 >
@@ -255,6 +260,8 @@ Before answering anything, remember the system as built:
 ### 🎯 Delivery Notes
 - "Intel Inside model" is a powerful analogy — judges understand it immediately
 - Showing you know the Innovation Fund cycle (6 months) demonstrates seriousness
+- **KILLER DETAIL:** The Innovation Fund already funded **SignAvatar** — a sign language accessibility app on Srbijavoz (Serbian Railways). They have explicit "inkluzija i pristupačnost" as a GovTech category. Medak is a PERFECT fit.
+- If pushed: "The Fund's GovTech program supports up to €120K for new solutions. Their Catalytic program goes up to €200K for AI companies. Smart Start gives ~€46K for MVP teams of 2-5."
 
 ---
 
@@ -320,7 +327,11 @@ Before answering anything, remember the system as built:
 
 > "RTT — Real-Time Text — jeste standard, i podržavamo ga kao koncept. Problem je trostruk.
 >
-> Prvo: RTT zahteva da PSAP centar ima opremu i obuku za prijem teksta. U Srbiji — nijedan centar to nema. U EU, do 2025. godine, samo Irska ima nativni RTT — prva zemlja u celoj EU. Malta i Holandija imaju RTT preko aplikacije. Većina ostalih cilja jun 2027., ali kašnjenja su česta — Finska je već odložila sa 2025. na 2027. RTT rešava problem samo tamo gde je infrastruktura već postavljena.
+> Prvo: RTT zahteva da PSAP centar ima opremu i obuku za prijem teksta. U Srbiji — nijedan centar to nema. U EU, do 2025. godine, samo Irska ima nativni RTT — prva zemlja u celoj EU. Malta i Holandija imaju RTT preko aplikacije. Većina ostalih cilja jun 2027., ali kašnjenja su česta — Finska je već odložila sa 2025. na 2027.
+>
+> Evo što mnogi ne znaju: da bi zemlja implementirala nativni RTT, mora prvo da migrira celu 112 infrastrukturu na full-IP mrežu — NG112 arhitektura. To je projekat od više stotina miliona evra koji traje godinama. Većina EU zemalja nije ni osigurala finansiranje za to. Rok 2027. je strukturno nemoguć za najveći deo EU.
+>
+> RTT rešava problem samo tamo gde infrastruktura već postoji.
 >
 > Drugo: RTT je tekst. U panici, ljudi ne mogu efikasno da kucaju. Naše istraživanje i objavljene studije potvrđuju: kucanje u kriznoj situaciji je sporo, netačno, i stresno. Kamera koja vidi scenu je fundamentalno bolja od teksta koji opisuje scenu.
 >
@@ -332,7 +343,11 @@ Before answering anything, remember the system as built:
 
 > "RTT — Real-Time Text — is a standard, and we support it as a concept. The problem is threefold.
 >
-> First: RTT requires the PSAP center to have equipment and training for receiving text. In Serbia — no center has that. In the EU, as of 2025, only Ireland has native RTT — the first country in the entire EU. Malta and Netherlands have app-based RTT. Most others target June 2027 but delays are common — Finland already delayed from 2025 to 2027. RTT only solves the problem where infrastructure is already in place.
+> First: RTT requires the PSAP center to have equipment and training for receiving text. In Serbia — no center has that. In the EU, as of 2025, only Ireland has native RTT — the first country in the entire EU. Malta and Netherlands have app-based RTT. Most others target June 2027 but delays are common — Finland already delayed from 2025 to 2027.
+>
+> Here's what most people don't realize: **countries can't deploy native RTT without first implementing full NG112 infrastructure** — that means migrating PSAPs from legacy TDM circuit-switched telephony to full-IP networks. That's a multi-year, multi-hundred-million euro infrastructure project. Most EU countries haven't even committed funding for it. The 2027 deadline is structurally impossible for the majority.
+>
+> RTT only solves the problem where infrastructure is already in place.
 >
 > Second: RTT is text. In a panic, people can't type effectively. Our research and published studies confirm: typing in a crisis is slow, inaccurate, and stressful. A camera that sees the scene is fundamentally better than text describing the scene.
 >
@@ -482,10 +497,59 @@ For rapid-fire Q&A, here's the one-sentence version of each answer:
 | 21 | 5 people vs procurement? | Serbia: Innovation Fund (6mo). EU: Intel Inside model — partner with existing contractors. |
 | 22 | No internet? | Real limitation, but without Medak they also can't communicate via 112. 97% have mobile internet. |
 | 23 | API downtime? | 10s timeout → call with partial data. Google SLA 99.95%. Multi-model fallback planned. |
-| 24 | Why not RTT? | RTT needs PSAP infrastructure that doesn't exist. No dialogue. Typing in panic is terrible. |
+| 24 | Why not RTT? | RTT requires NG112 migration first (multi-year, hundreds of millions). Only Ireland has it. Medak works NOW with zero PSAP changes. |
 | 25 | GDPR? | No storage (streaming), GDPR Art 6(1)(d) vital interests, EU Vertex AI endpoint for production. |
 | 26 | Show the code? | Pure arithmetic: 5 weights, threshold 0.85. No LLM in scoring. *[recite the function]* |
 | 27 | Why hasn't anyone built this? | 7 structural barriers (fragmentation, market failure, lock-in, liability). Gemini 2.0 Flash Live is the enabling tech that didn't exist last year. |
+| 28 | Responsible AI? | AI agents gather info; deterministic FSM makes the call decision. Every decision logged, traceable, auditable. Zero LLM in scoring. |
+| 29 | Why not Google ADK? | ADK = tool-calling/completions. Gemini 2.0 Flash Live = bidirectional WebSocket streaming. ADK doesn't support Live API streaming mode. Direct API = max control for safety-critical system. |
+
+---
+
+## Q28: "Kako obezbeđujete odgovoran pristup AI? / How do you ensure responsible AI use?"
+
+**SR:**
+> "Ovo je centralni dizajn princip, ne naknadan dodatak. AI agenti rade ono u čemu su dobri — prepoznavanje scena, prirodni jezik, glasovni relay. Ali nijedan AI agent ne donosi kritičnu odluku. Odluku da li da se pozove 112 donosi deterministička state mašina — FSM sa eksplicitnim pragom od 0.85. Pet težina, čista aritmetika, nula LLM-a u procesu odlučivanja.
+>
+> Svaka tranzicija između faza — INTAKE, TRIAGE, LIVE_CALL, RESOLVED — je logovana i trasirana. Ako regulator pita 'zašto je ovaj poziv upućen?' — mi možemo pokazati tačan trenutak, tačan confidence score i tačne podatke koji su doprineli odluci. Nema crne kutije.
+>
+> Dodatno: ne čuvamo lične podatke nakon poziva — streaming model, ne skladište. GDPR član 6(1)(d), vitalni interesi. I koristimo EU Vertex AI endpoint za produkciju."
+
+**EN:**
+> "This is a core design principle, not an afterthought. The AI agents do what AI is good at — scene recognition, natural language, voice relay. But no AI agent makes the critical decision. The decision to call 112 is made by a deterministic FSM with an explicit threshold of 0.85. Five weights, pure arithmetic, zero LLM in the decision path.
+>
+> Every phase transition — INTAKE, TRIAGE, LIVE_CALL, RESOLVED — is logged and traceable. If a regulator asks 'why was this call placed?' we can show the exact moment, exact confidence score, and exact data points that contributed. No black box.
+>
+> Additionally: we don't store personal data after the call — streaming model, not storage. GDPR Article 6(1)(d), vital interests. EU Vertex AI endpoint for production."
+
+**🎯 Delivery Notes:**
+- This question is a GIFT at a "Build with AI" hackathon — it lets you showcase responsible design
+- Key phrase: "AI does what AI is good at. Deterministic systems do what humans need to trust."
+- Draw the contrast: "Most AI projects let the LLM decide everything. We explicitly don't."
+- If you get this question, you can name-drop the EU AI Act classification: "Under the EU AI Act, emergency dispatch is high-risk. Our architecture was designed for that classification from day one."
+
+---
+
+## Q29: "Why didn't you use Google ADK (Agent Development Kit)?"
+
+**SR:**
+> "ADK je odličan framework za tool-calling agente i workflow automatizaciju. Ali Medak zahteva nešto fundamentalno drugačije — bidirekcionalnu real-time audio/video streaming konekciju sa nultom latencijom. ADK radi na standardnim completion pozivima; Gemini 2.0 Flash Live zahteva persistentnu WebSocket streaming sesiju.
+>
+> Za real-time glasovni relay hitnih poziva, direktna Gemini Live API integracija je jedino rešenje koje radi u praksi. ADK ne podržava Gemini Live API streaming model koji nam je potreban.
+>
+> Naša orkestracija nije ad-hoc — to je deterministička state mašina sa jasnom separacijom: AI agenti za percepciju i jezik, FSM za tranzicije i kritične odluke. Arhitekturno, to je ispravniji pristup za ovaj use case od ADK-based rešenja."
+
+**EN:**
+> "ADK is an excellent framework for tool-calling agents and workflow automation. But Medak requires something fundamentally different — bidirectional real-time audio/video streaming with zero latency. ADK operates on standard completion calls; Gemini 2.0 Flash Live requires a persistent WebSocket streaming session.
+>
+> For real-time voice relay of emergency calls, direct Gemini Live API integration is the only practical solution. ADK doesn't support the Gemini Live API streaming model we need.
+>
+> Our orchestration isn't ad-hoc — it's a deterministic state machine with clear separation of concerns: AI agents for perception and language, FSM for transitions and critical decisions. Architecturally, this is the more appropriate approach for this use case than ADK-based solutions."
+
+**🎯 Delivery Notes:**
+- Don't be defensive — ADK is a great tool, just wrong tool for this problem
+- The real-time streaming constraint is the key technical reason: "ADK doesn't do WebSocket streaming for live audio/video"
+- Flip it: "We deliberately chose the lowest-level API access to maximize control over a safety-critical system. For emergency calls, you don't want framework magic between you and the API."
 
 ---
 
@@ -497,7 +561,7 @@ For rapid-fire Q&A, here's the one-sentence version of each answer:
 
 3. **Redirect to the alternative.** When challenged on a limitation, ask: "What's the alternative for this person today?" Answer: nothing. Medak with limitations is infinitely better than nothing.
 
-4. **Cite specifics.** Article 6(1)(d). Weight 0.35. $0.13. 38 seconds. TransportSign. Numbers build credibility.
+4. **Cite specifics.** Article 6(1)(d). Weight 0.35. $0.13. 38 seconds. SignAvatar (Innovation Fund precedent). Numbers build credibility.
 
 5. **Have one devastating closer per topic.** For false positives: "False positive cost is $0.13. False negative cost is a human life." For cost comparison: "Human relay at 3 AM requires paying overnight staff regardless of call volume." Memorize these.
 

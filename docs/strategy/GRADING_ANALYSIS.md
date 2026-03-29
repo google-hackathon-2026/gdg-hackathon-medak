@@ -423,7 +423,7 @@
 ### What Does NOT Need More Work
 - ✅ All strategy docs — complete and quality-reviewed
 - ✅ Pitch script — word-for-word, timed, with emergency cuts
-- ✅ Q&A preparation — 26 questions answered
+- ✅ Q&A preparation — **29 questions answered** (incl. Q28 responsible AI, Q29 ADK, updated RTT/competition)
 - ✅ Demo fallback plan — 3 tiers defined
 - ✅ Implementation story — confidence racing narrative
 - ✅ Business model — B2G with concrete numbers
@@ -441,3 +441,19 @@
 The remaining gaps are not knowledge gaps — they're execution gaps. The team knows exactly what to say, how to say it, and what to show. Now they need to build the slides, rehearse the pitch, and nail the demo.
 
 **If the demo works and the pitch is rehearsed, this is a top-3 contender.**
+
+---
+
+## MARCH 29 SPRINT SUMMARY (04:00-06:30 UTC)
+
+**32+ files updated**, 4 new docs created, 29 Q&A answers total. Key improvements:
+1. WHO stats corrected 466M→430M (22+ instances, credibility protected)
+2. Fresh competitive intel: AccesSOS, RTT, text-to-911, Ukraine 112, EENA 2G/3G
+3. Innovation Fund precedent: SignAvatar (sign language AI, funded by same fund)
+4. Regulatory tailwind: EC quote, EU Parliament 409-9 vote, EU Disability Strategy 2026-2030
+5. ADK question prepared (Q29) + architecture doc updated
+6. README.md completely rewritten for GitHub judges
+7. SOM Y1-2→Y3-5 fixed, Gemini version fixed throughout
+8. New docs: STATS_QUICK_REFERENCE, RESEARCH_UPDATES, PRESENTATION_DAY_CHECKLIST, PITCH_WINNING_INSIGHTS
+
+**Still execution-dependent:** Slides (D1), rehearsal (D4/D5), demo (T2/T4).

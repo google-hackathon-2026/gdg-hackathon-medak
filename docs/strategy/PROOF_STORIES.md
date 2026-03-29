@@ -77,9 +77,17 @@
 | "1 in 10 deaf people in the UK have avoided calling an ambulance entirely because of communication barriers." | RNID / SignHealth |
 | "1 in 4 deaf people in the UK delayed seeking help for new health concerns." | RNID / SignHealth |
 | "Only about half of US 911 centers can accept text messages as of 2025." | FCC / PagerDuty report, 2025 |
+| "Deaf patients face 'systemic exclusion' in emergency departments — academic peer-review, published March 10, 2026." | Journal of Emergency Nursing, 2026 |
+| "Cardiac arrest survival decreases 5-12% per minute without treatment. A 5-minute earlier call improves survival from 47.7% to 68.6%." | Johansen et al., Frontiers in Public Health / PMC, January 2026 |
+| "People who received CPR within 2 minutes had an 81% greater chance of surviving than those who received no bystander CPR." | AHA, 2025 |
 | "Serbia has zero alternative access to 112 — no SMS, no app, no video relay, no text relay. Nothing." | EENA Accessibility Table |
 | "37 million deaf/HoH Americans + 29.6 million with limited English proficiency cannot reliably call 911." | AccesSOS, 2025 |
+| "Ukraine launched video sign-language 112 access — during a war. Most EU countries still offer nothing." | 112 Ukraine app update, March 12, 2026 |
+| "A US 911 director said this month: 'We get so much more information from somebody calling in and hearing what's going on. We ask people to call if you can, text if you can't.'" | Belmont County 911 Director Bryan Minder, March 25, 2026 |
 | "The EU mandated equivalent emergency access by June 2025 (EAA), with derogation allowing until June 2027. The UN CRPD Committee expressed 'serious concern' about the delays in March 2025." | EAA, Directive 2019/882/EC; UN CRPD Concluding Observations, 2025 |
+| "EU emergency number 112: people with communication difficulties can access emergency services using voice, text, or video in real time and from anywhere in the European Union." — European Commission's own website, July 2025 | European Commission, July 31, 2025 |
+| "When public and private authorities fail to meet the EU's accessibility obligations, there should be clear sanctions and penalties." — European Parliament resolution, 409 votes in favour | EU Parliament, November 27, 2025 |
+| "~100 million people in the EU live with a disability." | European Commission, 2025 |
 | "Unaddressed hearing loss costs the global economy $980 billion annually." | WHO World Report on Hearing, 2021 |
 | "Serbia's ~84,000 deaf and hard of hearing citizens have the same emergency access as they had in 1990: none." | EENA data + Statistical Office of RS |
 
@@ -102,10 +110,68 @@ TOTAL: ~10 min             Dispatched     → 9 min
 
 ---
 
+## 📰 Recent Headlines (2025-2026)
+
+### UK: Deaf TikTok Star's Death — Interpreter Shortage
+**Imogen Nunn** (25, born deaf, 780K TikTok followers) died in Brighton on New Year's Day 2023 after a poisonous substance. During a crisis check-in days before her death, **no BSL interpreter was brought** because "there wasn't enough time to arrange one."
+
+Nurse Carmen Jones told the inquest (May 2025): *"There is a huge shortage of BSL interpreters. It would be very difficult for a deaf person to communicate the crisis they were in without an interpreter."*
+
+The coroner issued a **prevention of future deaths** report about interpreter availability in crisis situations.
+
+**For pitch:** AI doesn't get tired, doesn't need scheduling, doesn't have a shortage. It's available in 38 seconds.
+
+### Ukraine: Video Sign Language 112 — Launched While At War (March 12, 2026)
+Ukraine's Ministry of Internal Affairs updated the **112 Ukraine app** to include **video calls to sign-language-fluent operators** and automatic geolocation. The app has been downloaded 326,000+ times and processed 9,200+ emergency requests.
+
+**This happened 17 days ago. While the country is at war.**
+
+Meanwhile, most EU countries — at peace, with larger budgets — offer zero accessible 112 for deaf citizens.
+
+**For pitch:** "Ukraine built accessible 112 during a war. What's our excuse?" This comparison is DEVASTATING. Use only if a judge pushes back on whether it's realistic. Also note: Ukraine's approach requires human sign-language operators (expensive, limited), while Medak uses AI (unlimited, instant).
+
+### EENA: Europeans Losing Ability to Reach 112 (Dec 2025)
+EENA warned that "Europeans are increasingly unable to reach emergency services while roaming" due to 2G/3G shutdown incompatibilities. Some 4G/5G phones fail to make emergency calls. In Australia, **a person died** when their Samsung device failed to connect to emergency services.
+
+**For pitch:** The emergency access gap is getting WORSE, not better. If hearing people are losing access, imagine what it's like for deaf people who never had it.
+
+### UK: 1 in 10 Deaf People Avoid Calling Emergency Services (September 2025)
+RNID and SignHealth joint research (September 2025):
+- **1 in 10** deaf or hard of hearing people have avoided calling an ambulance or visiting A&E because of communication barriers
+- **1 in 4** have delayed seeking help for new health concerns
+- 1 in 3 UK adults is deaf, hard of hearing, or has tinnitus — **18 million people**
+
+**The Cheshire Fire Incident:** A deaf couple called 999 to report a fire but hung up before giving details. The call was dismissed as a hoax. The father had to reconnect directly with the fire station. This prompted Cheshire Fire and Rescue to introduce text-based access.
+
+**For pitch:** People don't just fail to get help — they **stop trying**. The 1 in 10 who avoid calling are the invisible casualties. No record is kept. No study counts them. Medak's voice relay means never having to choose between trying and giving up.
+
+**Source:** Emergency Services Times, September 9, 2025; RNID/SignHealth joint research.
+
+### Peer-Reviewed: Deaf Barriers in Emergency Departments (March 10, 2026 — 19 days ago)
+Journal of Emergency Nursing (March 2026, peer-reviewed): **"Deaf and hard-of-hearing individuals encounter persistent barriers in emergency departments, where care often relies on rapid, spoken exchanges, auditory dominance, and limited willingness to adapt communication approaches."**
+
+5 key themes from systematic review: (1) communication barriers, (2) delays and disparities in care, (3) patient care experiences, (4) systemic exclusion, (5) strategies for accessible care.
+
+**Finding:** "Without access to signed or visual communication, patient safety is compromised, informed consent becomes uncertain, and equitable care cannot be guaranteed."
+
+**For pitch:** This is academic validation published THIS MONTH (March 2026). The problem isn't anecdotal — it's systematically documented in peer-reviewed medical literature.
+
+**Source:** J Emerg Nurs. 2026 Mar;52(2):486-499. doi: 10.1016/j.jen.2025.10.018.
+
+### Switzerland Modernizing Emergency Access (June 2025)
+The Swiss Federal Council put text-based emergency access for hearing-impaired into legislation. Even Switzerland — not an EU member — is acting.
+
+**For pitch:** The global regulatory wave isn't theoretical. Even non-EU countries are legislating.
+
+---
+
 ## 🗣️ If You Only Remember One Quote
 
 *"I explained to him that those three calls could easily have represented three separate life-threatening emergencies for different deaf people. And he didn't have any explanation for it."*
 — Attorney Greg Relyea, after 911 hung up on his TDD three times in front of a police investigator
+
+*"It would be very difficult for a deaf person to communicate the crisis they were in without an interpreter."*
+— Nurse Carmen Jones, inquest into Imogen Nunn's death, May 2025
 
 ---
 

@@ -62,7 +62,7 @@ Slide  Title                          Duration   Cumulative   Presenter
 
 > "Zamislite da ste gluvi. Vaš stan gori. Dim se širi. Srce vam lupa. Zgrabi telefon — ali ne možete da pozovete 112.
 >
-> Ovo je Ana. Ima 26 godina, gluva je od rođenja i živi sama u Beogradu. Prošle noći, njena komšinica Milica je kolabirana u njenoj kuhinji — mogući moždani udar. Ana ne može da vikne u pomoć. Ne može da pozove hitnu. Jedino što može — je da pritisne jedno dugme."
+> Ovo je Ana. Ima 26 godina, gluva je od rođenja i živi sama u Beogradu. Prošle noći, njena komšinica Milica je kolabirala u njenoj kuhinji — mogući moždani udar. Ana ne može da vikne u pomoć. Ne može da pozove hitnu. Jedino što može — je da pritisne jedno dugme."
 
 *[Beat. Click to next slide.]*
 
@@ -432,7 +432,7 @@ T+6s: Operator: "Is the patient conscious?"
 - Bottom: TAM/SAM/SOM compact:
   - TAM: €50-100M/year
   - SAM: €10-20M/year
-  - SOM (Y1-2): €5-8M ARR
+  - SOM (Y3-5): €5-8M ARR
 
 **Visual:** Clean two-column layout. Cost comparison box prominently placed. TAM/SAM/SOM as nested rectangles at bottom.
 
@@ -464,7 +464,7 @@ T+6s: Operator: "Is the patient conscious?"
   - 🔵 Year 3-5: 15+ EU countries
 - Right side: Three expansion dimensions:
   1. **Jezici:** Gemini nativno podržava 40+ jezika — zero retraining
-  2. **Korisnici:** Turistički sektor — 180M turista u EU godišnje sa jezičkom barijerom
+  2. **Korisnici:** Turistički sektor — 180M turista u EU godišnje sa jezičkom barijerom. I ne samo gluvi — starije osobe, osobe sa govornim poremećajima, korisnici pad-detekcije
   3. **Troškovi:** Cloud Run auto-scaling — $55/mesec pilot, $580/mesec nacionalno
 
 **Visual:** Europe map with color-coded expansion tiers. Clean right-side bullet list.
@@ -662,7 +662,11 @@ Total: 600s (10:00). Of which 35s is cuttable content (marked ✂️) if running
 
 **Q3: "Da li je ovo legalno? EU AI Act?"**
 
-> "Svesni smo da bi Medak bio klasifikovan kao high-risk AI sistem po EU AI Actu — Aneks III, kategorija 5(d), AI u hitnim službama. To znači: obavezna conformity assessment, ljudski nadzor, transparentnost, dokumentacija. Procena troška usklađivanja je oko 100 hiljada evra. Ali — ključna stvar — Medak ne zamenjuje ljudsku odluku. Operater i dalje donosi sve odluke o slanju ekipe. Mi samo omogućavamo komunikaciju koja bez nas ne bi postojala. Alternativa je bukvalno — ništa."
+> "Svesni smo da bi Medak bio klasifikovan kao high-risk AI sistem po EU AI Actu — Aneks III, kategorija 5(d), AI u hitnim službama. To znači: obavezna conformity assessment, ljudski nadzor, transparentnost, dokumentacija. Procena troška usklađivanja je oko 100 hiljada evra.
+>
+> Za GDPR: PoC koristi us-central1 za development. Za produkciju, koristili bismo EU Vertex AI endpoint — Google Cloud eu-west region. Vertex AI je ISO 27001/27017/27018/27701 sertifikovan, sa EU data processingom po GDPR čl. 6(1)(d) — vitalni interesi. Ne čuvamo lične podatke posle poziva — streaming model, ne skladište.
+>
+> Ali — ključna stvar — Medak ne zamenjuje ljudsku odluku. Operater i dalje donosi sve odluke o slanju ekipe. Mi samo omogućavamo komunikaciju koja bez nas ne bi postojala. Alternativa je bukvalno — ništa."
 
 ---
 
@@ -680,13 +684,17 @@ Total: 600s (10:00). Of which 35s is cuttable content (marked ✂️) if running
 
 **Q6: "Koliko košta development do production-a?"**
 
-> "Pilot u Srbiji: oko 75 hiljada evra — 6 meseci sa timom od 3 inženjera. To uključuje hardening, EU AI Act usklađivanje, i penetration testing. Infrastruktura za pilot: 55 dolara mesečno. Za nacionalni deployment — 580 dolara mesečno. Ovo je grant-fundable — Serbian Innovation Fund je već finansirao TransportSign, sličan accessibility projekat."
+> "Pilot u Srbiji: oko 75 hiljada evra — 6 meseci sa timom od 3 inženjera. To uključuje hardening, EU AI Act usklađivanje, i penetration testing. Infrastruktura za pilot: 55 dolara mesečno. Za nacionalni deployment — 580 dolara mesečno. Ovo je grant-fundable — Fond za inovacionu delatnost je već finansirao SignAvatar, aplikaciju za znakovni jezik na Srbijavozu."
 
 ---
 
 **Q7: "Ko je vaša konkurencija?"**
 
-> "U ovom prostoru — niko ne radi ono što mi radimo. AccesSOS u SAD-u je najbliža paralela — neprofitna aplikacija u Kaliforniji i Novom Meksiku. Nedavno su proširili na 30 jezika i razvijaju AI prototip za automatsko deljenje zdravstvenih podataka. Ali fundamentalno — AccesSOS šalje tekst dispečeru, ne glas. Radi samo gde postoji text-to-911 infrastruktura, što je otprilike polovina SAD-a. DEC112 u EU je text-to-112 ali radi samo gde PSAP podržava tekst — skoro nigde. Ljudski relay servisi koštaju 20 do 40 dolara po pozivu i nisu 24/7. Medak je jedini sistem koji kombinuje scene understanding, glasovni poziv i real-time Q&A relay — i jedini koji ne zahteva nikakvu promenu na strani hitne službe."
+> "U ovom prostoru — niko ne radi ono što mi radimo. AccesSOS u SAD-u je najbliža paralela — neprofitna aplikacija u Kaliforniji i Novom Meksiku sa 70 hiljada korisnika. Ali fundamentalno — šalju tekst, ne glas. Radi samo gde postoji text-to-911, a to je polovina SAD-a. DEC112 u EU je text-to-112 ali zahteva upgrade PSAP centara.
+>
+> Zanimljiv primer: Ukrajina je pre dve nedelje — usred rata — pokrenula video pozive ka 112 operaterima koji znaju znakovni jezik. To dokazuje koliko je ovaj problem hitan. Ali njihovo rešenje zahteva ljudske prevodioce — koji su skupi i ograničeni.
+>
+> Medak je jedini sistem koji kombinuje AI scene understanding, glasovni poziv i real-time Q&A relay — i jedini koji ne zahteva nikakvu promenu na strani hitne službe. I skalira se beskonačno, za 13 centi po pozivu."
 
 ---
 

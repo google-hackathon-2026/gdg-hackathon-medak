@@ -90,6 +90,7 @@ For every other citizen, reaching emergency services takes **5 seconds** — dia
 - **Requires PSAP upgrades** — the emergency call center must install RTT-compatible equipment and software.
 - **Massive infrastructure cost** — each PSAP needs new terminals, training, and protocols.
 - **Almost no adoption** — as of 2025, **only Ireland has native RTT** (first in EU). Malta and Netherlands have app-based RTT. Most member states target 2027 but delays are common (e.g., Finland delayed from 2025 to 2027). Germany: some PSAPs potentially from June 2025, full coverage by June 2027.
+- **Structural barrier:** RTT requires **full NG112 migration first** — upgrading all PSAPs from 1990s TDM telephony to all-IP networks. Multi-year, multi-hundred-million-euro project per country. Most EU countries haven't even secured funding. The 2027 deadline is structurally impossible for the majority. (Source: Critical Communications Today, June 2025)
 - **Still text-based** — the deaf person must type under stress; no scene understanding.
 - **EAA deadline pressure** — EU mandates accessible 112 by June 2027, but most PSAPs are nowhere near ready.
 
@@ -193,6 +194,28 @@ For every other citizen, reaching emergency services takes **5 seconds** — dia
 - **Italy-focused** — limited availability elsewhere.
 
 **Medak advantage:** AI-powered conversation (not just TTS/STT), scene understanding, emergency-native, near-zero latency with Gemini Live.
+
+---
+
+### 2.11 112 Ukraine App (Ukraine — March 2026)
+
+**What it is:** Ukraine's official 112 app, updated March 12, 2026 with **video calls to sign-language-fluent operators** and automatic geolocation. 326,000+ downloads, 9,200+ emergency requests processed.
+
+**Why it's significant:**
+- **Ukraine built this during a war.** Most EU countries at peace haven't managed it.
+- **First-party government solution** — Ministry of Internal Affairs initiative.
+- **Video + sign language** — operators must be fluent in sign language.
+- **Validates the need** — even a country at war prioritized deaf emergency access.
+
+**Why it doesn't scale:**
+- **Requires sign-language-fluent operators** — expensive, limited pool, one language per operator.
+- **Video bandwidth requirements** — challenging in low-connectivity areas (relevant during war).
+- **Single country** — each country would need its own sign-language-trained operators.
+- **Not applicable for speech-impaired or tourists** — only helps deaf sign language users.
+
+**Medak advantage:** AI-powered voice relay doesn't need sign language operators. Works in any language. Scales infinitely. Costs 150× less per call. Also serves speech-impaired and non-sign-language users.
+
+**The devastating Q&A line:** *"Ukraine built accessible 112 during a war. What's the EU's excuse?"*
 
 ---
 
@@ -328,6 +351,20 @@ Medak isn't possible without this technology generation. We're building on infra
 - **Australia's National Relay Service** review — looking for next-gen solutions
 
 The global regulatory environment is **converging on mandatory accessible emergency services**, creating a massive addressable market.
+
+### 5.5 Serbia EECC Accession Incentive (NEW — November 2025)
+
+The **EU Commission's 2025 Serbia Report** (November 4, 2025) explicitly recommended Serbia:
+> *"align its legislation on electronic communications... with the EU regulatory framework, including the EU Electronic Communications Code"*
+
+The EECC includes **Article 109** — accessible 112 for deaf citizens. **Implications:**
+
+- Serbia has opened 22/35 EU negotiating chapters; Cluster 3 (digital) is technically ready
+- EECC alignment = explicit EC recommendation for Serbia
+- Implementing Medak = visible EECC compliance progress → accelerates accession talks
+- Serbia's government has **direct political incentive** to implement accessible 112
+
+This transforms the B2G pitch in Serbia from "nice accessibility app" to "EU accession deliverable."
 
 ---
 

@@ -28,8 +28,9 @@ You carry 80% of the pitch. Your prep is the heaviest.
 | File | Why | Lines |
 |------|-----|-------|
 | **PITCH_SCRIPT_10MIN.md** | Your word-for-word script, all 12 slides + Q&A section | 904 |
-| **QA_EXTENDED.md** | 14 hard follow-up questions (Q13-Q26) beyond the basic 12 | 485 |
-| **PROOF_STORIES.md** | Real cases to cite when judges challenge if the problem is real | ~110 |
+| **PITCH_DELIVERY_GUIDE.md** | ⭐ HOW to say it — silence, pace, body language. Read morning-of. | ~200 |
+| **QA_EXTENDED.md** | 29 hard follow-up questions beyond the basic 12 | 560+ |
+| **PROOF_STORIES.md** | Real cases to cite when judges challenge if the problem is real | ~150 |
 | **TARGET_PERSONAE.md** | Know Ana, Stefan, Jelena by heart — they ARE your Slide 3 | 316 |
 
 ### Skim (source material for your slides)

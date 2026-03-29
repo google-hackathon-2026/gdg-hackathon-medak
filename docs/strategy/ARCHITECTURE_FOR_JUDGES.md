@@ -260,6 +260,30 @@ Push notification channel for background alerts — e.g., "Help dispatched, ETA 
 
 ---
 
+## Validation: Independent Projects Confirm Our Approach
+
+Two independent projects published in early 2026 validate our technical approach:
+
+1. **MediSense** (March 16, 2026) — A real-time emergency healthcare co-pilot built with Gemini 2.0 Flash Live API, Cloud Run, and Vertex AI. Developer conclusion: "The Multimodal Live API is a game-changer. Being able to stream video + audio bidirectionally opens up use cases that weren't possible with traditional request-response APIs. Healthcare is one of the most impactful."
+
+2. **AI Emergency Squad** (December 2025) — Google DeepMind hackathon project using Gemini multimodal for scene analysis + multi-agent safety guardrails in emergencies.
+
+Both validate that: (a) Gemini Live API works for real-time emergency applications, (b) multi-agent architecture with deterministic safety guards is the right pattern, and (c) Cloud Run + Vertex AI is the appropriate deployment stack.
+
+---
+
+## Why Direct Gemini API (Not Google ADK)?
+
+Google ADK is excellent for **tool-calling completion agents** (function calls, search, workflow automation). Medak requires something different:
+
+- **Bidirectional real-time audio/video streaming** — persistent WebSocket, not request/response
+- **Zero-latency voice synthesis** — audio must play continuously during live phone call
+- **Media streaming integration** with Twilio — raw audio bytes, not text completions
+
+ADK currently doesn't support Gemini 2.0 Flash Live's streaming session model. We use the direct Gemini Live API because it's the correct tool for real-time voice/video agents. Additionally, for a safety-critical system, direct API access provides maximum control and auditability.
+
+---
+
 ## Tech Stack Summary
 
 | Layer | Technology | Role |

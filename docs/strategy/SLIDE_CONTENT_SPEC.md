@@ -644,7 +644,7 @@ Korisnici ≠ Kupci
 
 Three nested rectangles (largest to smallest, left to right or concentric):
 ```
-TAM: €50-100M/year    SAM: €10-20M/year    SOM (Y1-2): €5-8M ARR
+TAM: €50-100M/year    SAM: €10-20M/year    SOM (Y3-5): €5-8M ARR
 ```
 - TAM rectangle: Light navy background `#E8EAF6`, largest
 - SAM rectangle: Medium navy `#C5CAE9`, medium
@@ -757,15 +757,17 @@ Each card:
 └──────────────┘
 ```
 
-**Team members** (fill in actual names — template below):
+**Team members** (fill in actual names — adjust roles as needed):
 
 | Position | Name | Role | Skill line |
 |----------|------|------|------------|
-| 1 | [Name 1] | Lead / Pitch | Product & Strategy |
-| 2 | [Name 2] | Backend | AI Agents & Orchestration |
-| 3 | [Name 3] | Frontend | React Native & UX |
-| 4 | [Name 4] | DevOps | Cloud Run, Redis, Twilio |
-| 5 | [Name 5] | Research | User Research & Business |
+| 1 | Branko | Frontend | React Native & UX |
+| 2 | Filip | Frontend | Expo & Mobile |
+| 3 | Milan J. | Backend | FastAPI & AI Agents |
+| 4 | Milan D. | Architecture | AI Orchestration & Strategy |
+| 5 | Boris | Research | User Research & Business |
+
+> ⚠️ **Team:** Adjust roles/skill lines to match actual contributions. The above is based on code repo assignments.
 
 **Bottom tagline** (centered):
 ```
