@@ -152,6 +152,6 @@ We didn't build Medak and then look for research to justify it. **We listened fi
 
 ---
 
-*Document compiled: March 2025 | GDG Hackathon Medak*
+*Document compiled: March 2026 | GDG Hackathon Medak*
 *Primary research: 18 respondents (deaf/HoH community networks, Serbia & Western Balkans)*
 *Secondary sources: WHO (2021), EUD EECC Report (2024), EENA (2025), European Commission (2024), Sorenson (2024), AccesSOS (2022–2024), Kushalnagar et al. (2023), Atwell et al. (2024), Maguire et al. (2025)*
