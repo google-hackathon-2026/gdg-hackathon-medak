@@ -17,12 +17,12 @@
                        │
                        ▼
 ┌─────────────────────────────────────────────────────┐
-│              PHASE 2: SYNTHETIC USERS               │
+│              PHASE 2: USER NEEDS ANALYSIS            │
 │           (depends on B1 — personae defined)         │
 │                                                     │
-│  [S1] Create AI personas from B1 definitions        │
-│  [S2] Personas fill Google Form → synthetic data    │
-│  [S3] Analyze synthetic survey results              │
+│  [S1] Create user personas from B1 definitions      │
+│  [S2] Personas inform survey → user needs data      │
+│  [S3] Analyze survey results                        │
 │                                                     │
 │  S1 → S2 → S3 (sequential)                         │
 └──────────────────────┬──────────────────────────────┘
