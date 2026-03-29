@@ -87,12 +87,13 @@ Built a **scripted demo mode** — same real pipeline (FSM, audio bridge, Redis,
 | Pitch script | 12 slides, word-for-word script, timed to **600 seconds** |
 | Q&A prep | **26 anticipated questions** with rehearsed answers |
 
-## Phase 4 — Presentation Day
+## Phase 4 — Presentation Day (TODO)
 
-- Slides built from copy-paste spec (no last-minute design scramble)
-- 3 full rehearsals, timed
-- Demo tested on venue WiFi (the real risk)
-- Go time
+- [ ] Build slides from SLIDE_CONTENT_SPEC.md (copy-paste ready)
+- [ ] 3 full rehearsals, timed (target: 600s ± 15s)
+- [ ] Test demo on venue WiFi (the real risk — always bring mobile hotspot)
+- [ ] Print PRESENTER_POCKET_CARD.md for each team member
+- [ ] Final review of JUDGE_CHEAT_SHEET.md morning-of
 
 ## By The Numbers
 

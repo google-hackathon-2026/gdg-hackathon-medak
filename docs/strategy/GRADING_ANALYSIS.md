@@ -1,7 +1,8 @@
 # Grading Analysis — Medak × Build with AI 2026
 
-> **Last updated:** March 29, 2026 02:55 UTC
+> **Last updated:** March 29, 2026 04:30 UTC
 > **Status:** Post-strategy sprint. All docs created, pitch scripted, quality-reviewed.
+> **Updates (04:30):** WHO stats corrected (466M→430M across all docs), AccesSOS competitive intel updated, RTT/EECC latest status added, new docs: STATS_QUICK_REFERENCE.md, RESEARCH_UPDATES_2026_03_29.md.
 
 ---
 
@@ -26,7 +27,7 @@
 | Evidence | Where |
 |----------|-------|
 | Pitch opens with "Meet Ana" — deaf woman, apartment fire, can't call 112 | Slide 1 (30s) |
-| "112 is voice-only. Millions have no voice." + 3 big numbers (466M / 84K / 0) | Slide 2 (80s) |
+| "112 is voice-only. Millions have no voice." + 3 big numbers (430M / 84K / 0) | Slide 2 (80s) |
 | JUDGE_CHEAT_SHEET.md — one-paragraph problem statement | Cheat sheet |
 | IMPLEMENTATION_PROBLEM.md — before/after confidence racing | Deep dive doc |
 
@@ -181,7 +182,7 @@
 |----------|-------|
 | TARGET_PERSONAE.md — 7 detailed personas with emergency scenarios | Strategy doc |
 | Slide 2 — 4 user categories with icons (deaf, speech-impaired, tourists, sudden loss) | Slide 2 (80s) |
-| JUDGE_CHEAT_SHEET.md — "466M worldwide, 84K in Serbia" | Cheat sheet |
+| JUDGE_CHEAT_SHEET.md — "430M worldwide, 84K in Serbia" | Cheat sheet |
 | USER_NEEDS_ANALYSIS.md — survey data confirming need | Strategy doc |
 
 **Assessment:** Overkill for a hackathon (7 personas), which is exactly right. The pitch wisely focuses on Ana (one persona) for emotional impact, with broader categories on slide 2. If judges want depth, the docs deliver.

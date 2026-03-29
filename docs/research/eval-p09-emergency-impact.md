@@ -3,7 +3,7 @@
 ## 1. Population Affected
 
 ### Global & EU Scale
-- **WHO**: 466 million people worldwide have disabling hearing loss
+- **WHO**: 430 million people worldwide have disabling hearing loss (WHO 2021/2026 Fact Sheet)
 - **EU**: 34.4 million adults with disabling hearing loss (≥35 dB); 22.6 million of these are **untreated**
 - **Broader Europe**: 47.9 million adults with disabling hearing loss; 57 million Europeans (11% of population) when including >35 dB threshold
 - **EU speech disabilities**: ~2.8 million in the US alone have difficulty speaking (1.2% of population); EU proportional estimate is ~5–6 million

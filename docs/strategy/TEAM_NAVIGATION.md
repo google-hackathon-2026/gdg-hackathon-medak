@@ -8,12 +8,13 @@
 
 ## 🔴 EVERYONE — Read Before Pitch Day
 
-These 4 files take ~15 minutes total. Non-negotiable.
+These 5 files take ~20 minutes total. Non-negotiable.
 
 | File | Why | Lines |
 |------|-----|-------|
 | **PRESENTER_POCKET_CARD.md** | One-page timing reference — know the pitch flow | 76 |
 | **JUDGE_CHEAT_SHEET.md** | What judges see in 2 minutes — the elevator version | 58 |
+| **STATS_QUICK_REFERENCE.md** | **⚠️ SINGLE SOURCE OF TRUTH for all numbers.** Use only these. | ~100 |
 | **WHY_WE_WIN.md** | Competitive positioning & morale boost — know why we're strong | 251 |
 | **DEMO_FALLBACK_PLAN.md** | What to do if demo fails — everyone must know the tiers | 172 |
 
@@ -28,6 +29,7 @@ You carry 80% of the pitch. Your prep is the heaviest.
 |------|-----|-------|
 | **PITCH_SCRIPT_10MIN.md** | Your word-for-word script, all 12 slides + Q&A section | 904 |
 | **QA_EXTENDED.md** | 14 hard follow-up questions (Q13-Q26) beyond the basic 12 | 485 |
+| **PROOF_STORIES.md** | Real cases to cite when judges challenge if the problem is real | ~110 |
 | **TARGET_PERSONAE.md** | Know Ana, Stefan, Jelena by heart — they ARE your Slide 3 | 316 |
 
 ### Skim (source material for your slides)
@@ -155,6 +157,11 @@ All 25 strategy docs + 1 research doc, sorted by priority.
 | 23 | **GRADING_CRITERIA.md** | Raw grading criteria from organizers | 31 |
 | 24 | **PROBLEM_SCOREBOARD.md** | Problem selection scoreboard (historical) | 22 |
 | 25 | **PREHACKATHON_CHECKLIST.md** | Setup checklist (mostly obsolete, was for Cocoon) | 1664 |
+| 26 | **STATS_QUICK_REFERENCE.md** | **⚠️ Single source of truth for ALL stats** | ~100 |
+| 27 | **RESEARCH_UPDATES_2026_03_29.md** | Fresh research intelligence (WHO corrections, EECC status, CRPD) | ~160 |
+| 28 | **PROOF_STORIES.md** | Real documented cases for Q&A — when judges ask "is this real?" | ~110 |
+| 29 | **HACKATHON_JOURNEY.md** | Our weekend story arc for the "How we built it" angle | ~120 |
+| 30 | **TEAM_NAVIGATION.md** | This file — what to read per role | ~200 |
 
 ### `/docs/research/`
 
@@ -164,7 +171,7 @@ All 25 strategy docs + 1 research doc, sorted by priority.
 
 ---
 
-**Total: 26 docs · ~7,960 lines**
+**Total: 30 strategy docs + research docs**
 
 > 💡 **Pro tip:** If you only have 30 minutes before the pitch, read your "Must Read" list and the PRESENTER_POCKET_CARD. That's enough to not embarrass yourself on stage.
 

@@ -33,7 +33,7 @@
 
 | Service | Cost/call | Calculation |
 |---------|----------|-------------|
-| Gemini 2.5 Flash — scene analysis + description | ~$0.015 | ~2K tokens input + 500 output, 2 agents |
+| Gemini 2.0 Flash Live — scene analysis + voice dispatch | ~$0.015 | ~2K tokens input + 500 output, 2 agents |
 | Twilio — outbound voice call to 112 (~5 min) | ~$0.07 | EU rates, $0.014/min equivalent |
 | Gemini TTS — AI voice narration to operator | ~$0.02 | Text-to-speech for the call |
 | Infrastructure (servers, monitoring, overhead) | ~$0.02 | Amortized cloud costs |

@@ -79,7 +79,7 @@ Slide  Title                          Duration   Cumulative   Presenter
 **Content on slide:**
 - Title: **"112 je glasovni sistem. Milioni ljudi nemaju glas."**
 - Three big numbers in a row:
-  - **466M** — people with disabling hearing loss worldwide (WHO)
+  - **430M** — people with disabling hearing loss worldwide (WHO, 2021/2026)
   - **84,000** — deaf and hard of hearing in Serbia
   - **0** — number of countries offering full equivalent 112 access (EUD 2024)
 - Below: small icons representing other affected groups:
@@ -94,7 +94,7 @@ Slide  Title                          Duration   Cumulative   Presenter
 
 > "Sistem 112 u celoj Evropi funkcioniše na jedan jedini način — glasovnim pozivom. Ako ne možete da govorite, ne možete da pozovete pomoć.
 >
-> Ovo pogađa 466 miliona ljudi sa oštećenjem sluha širom sveta. U Srbiji, to je 84 hiljade ljudi — 14 hiljada gluvih i 70 hiljada nagluvih.
+> Ovo pogađa 430 miliona ljudi sa oštećenjem sluha širom sveta. U Srbiji, to je 84 hiljade ljudi — 14 hiljada gluvih i 70 hiljada nagluvih.
 >
 > Ali problem je širi od toga. Ljudi sa govornim invaliditetom — cerebralna paraliza, ALS, neverbalni autizam. Turisti koji ne govore srpski. Ili — i ovo je ključno —
 >
@@ -686,7 +686,7 @@ Total: 600s (10:00). Of which 35s is cuttable content (marked ✂️) if running
 
 **Q7: "Ko je vaša konkurencija?"**
 
-> "U ovom prostoru — niko. AccesSOS postoji kao text relay, ali nema AI scene understanding ni glasovni most. DEC112 je text-to-112 ali radi samo gde PSAP podržava tekst — što je skoro nigde. Ljudski relay servisi postoje u nekim zemljama, ali koštaju 20 do 40 dolara po pozivu i nisu dostupni 24/7. Medak je jedini sistem koji kombinuje scene understanding, glasovni poziv i real-time Q&A relay."
+> "U ovom prostoru — niko ne radi ono što mi radimo. AccesSOS u SAD-u je najbliža paralela — neprofitna aplikacija u Kaliforniji i Novom Meksiku. Nedavno su proširili na 30 jezika i razvijaju AI prototip za automatsko deljenje zdravstvenih podataka. Ali fundamentalno — AccesSOS šalje tekst dispečeru, ne glas. Radi samo gde postoji text-to-911 infrastruktura, što je otprilike polovina SAD-a. DEC112 u EU je text-to-112 ali radi samo gde PSAP podržava tekst — skoro nigde. Ljudski relay servisi koštaju 20 do 40 dolara po pozivu i nisu 24/7. Medak je jedini sistem koji kombinuje scene understanding, glasovni poziv i real-time Q&A relay — i jedini koji ne zahteva nikakvu promenu na strani hitne službe."
 
 ---
 

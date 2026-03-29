@@ -11,7 +11,7 @@
    Source: EECC Article 109, Delegated Regulation 2023/444
 
 2. **"30 million deaf Europeans have no way to call 112 today."**
-   Source: European Disability Forum, WHO Global Report 2024
+   Source: European Disability Forum, WHO World Report on Hearing, 2021
 
 3. **"In Serbia, 14,000 deaf citizens have ZERO direct access to emergency services."**
    Source: Serbian Deaf Association + Office for IT and eGovernment

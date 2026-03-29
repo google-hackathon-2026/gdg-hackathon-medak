@@ -8,7 +8,7 @@
 
 Emergency services worldwide are built around a single assumption: **the caller can speak and hear.**
 
-- **466 million people** globally have disabling hearing loss (WHO, 2024)
+- **430 million people** globally have disabling hearing loss (WHO, 2021 World Report on Hearing / 2026 Fact Sheet)
 - **70 million** are deaf (World Federation of the Deaf)
 - **1.5 billion** (20% of world population) live with some degree of hearing loss
 - In the EU alone, ~**52 million** people are deaf or hard of hearing (EUD, 2023)
@@ -89,7 +89,7 @@ For every other citizen, reaching emergency services takes **5 seconds** — dia
 **Why it fails:**
 - **Requires PSAP upgrades** — the emergency call center must install RTT-compatible equipment and software.
 - **Massive infrastructure cost** — each PSAP needs new terminals, training, and protocols.
-- **Almost no adoption** — most EU countries don't have it. As of 2024, only the Netherlands and a handful of others have partial deployment.
+- **Almost no adoption** — as of 2025, **only Ireland has native RTT** (first in EU). Malta and Netherlands have app-based RTT. Most member states target 2027 but delays are common (e.g., Finland delayed from 2025 to 2027). Germany: some PSAPs potentially from June 2025, full coverage by June 2027.
 - **Still text-based** — the deaf person must type under stress; no scene understanding.
 - **EAA deadline pressure** — EU mandates accessible 112 by June 2027, but most PSAPs are nowhere near ready.
 
@@ -99,19 +99,21 @@ For every other citizen, reaching emergency services takes **5 seconds** — dia
 
 ### 2.5 AccesSOS (USA)
 
-**What it is:** A free mobile app (501(c)(3) nonprofit) that connects users with 911 without voice calls. Uses an icon-based interface to select emergency type, auto-detects location, and connects to dispatchers via text.
+**What it is:** A free mobile app (501(c)(3) nonprofit) that connects users with 911 without voice calls. Uses an icon-based interface to select emergency type, auto-detects location, and connects to dispatchers via text. Founded 2019 after the founder's deaf father couldn't reach 911 during a medical emergency.
 
-**Availability:** Only California and New Mexico as of 2025. Expanding state-by-state.
+**Availability:** California and New Mexico as of 2025. Expanding state-by-state. As of Dec 2025: **69,611 users**, 145+ people accessed lifesaving help.
+
+**Recent developments (Sept 2025):** Expanded to **30 languages** via partnership with Respond Crisis Translation. Now developing **AI-powered features** (auto-sharing pre-saved health/location data, live on-device text translation for non-English users). PagerDuty partnership for infrastructure.
 
 **Why it fails:**
-- **Pre-built messages only** — icon-based, not real-time AI dialogue.
-- **Depends on text-to-911 infrastructure** — doesn't work where text-to-911 isn't available. Per user reviews: *"I don't have text to 911, so in an emergency I would waste time trying it."*
-- **No real-time conversation** — dispatcher can't ask follow-up questions dynamically.
+- **Pre-built messages only** — icon-based, not real-time AI dialogue (AI features still in prototype/pilot).
+- **Depends on text-to-911 infrastructure** — only ~50% of US 911 centers can receive texts (FCC, 2025). Doesn't work in the other half. Per user reviews: *"I don't have text to 911, so in an emergency I would waste time trying it."*
+- **No real-time voice conversation** — dispatcher can't ask follow-up questions dynamically via voice.
 - **No scene understanding** — user must manually select icons under stress.
 - **US-only, limited deployment** — requires state-by-state PSAP integration.
-- **No AI** — purely a structured form that sends text to dispatch.
+- **Text output only** — dispatchers receive text, not a voice call they already know how to handle.
 
-**Medak advantage:** Real-time AI dialogue. Scene understanding via camera. Works with any PSAP globally (voice call output). No dependency on text-to-911 infrastructure.
+**Medak advantage:** Real-time AI **voice** dialogue — the dispatcher hears a natural voice call and can ask follow-up questions normally. Camera-based scene understanding. Works with **any** PSAP globally (standard voice output). No dependency on text-to-911 infrastructure.
 
 ---
 
@@ -341,7 +343,7 @@ The global regulatory environment is **converging on mandatory accessible emerge
 - **EAA compliance spending potential:** Governments will allocate budgets specifically for 112 accessibility by 2027
 
 ### 6.3 Global Market
-- **466 million** people with disabling hearing loss worldwide (WHO, 2024)
+- **430 million** people with disabling hearing loss worldwide (WHO, 2021/2026)
 - **70 million** deaf people globally
 - Emergency relay services market: **$2.1 billion/year** (US TRS Fund alone is $1.2B)
 - AI can collapse this market's cost structure by **150x+**

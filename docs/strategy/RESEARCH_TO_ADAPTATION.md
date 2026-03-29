@@ -144,7 +144,7 @@ A missing address or unknown emergency type physically prevents the call from be
 
 ## Summary
 
-Our research with **18 respondents from the deaf, hard-of-hearing, and speech-impaired communities** across Serbia and the Western Balkans, combined with **published data from the WHO, EUD, EENA, European Commission, Sorenson Communications, AccesSOS, and peer-reviewed academic sources** covering **466 million people with disabling hearing loss** worldwide, directly shaped every major architectural decision in Medak.
+Our research with **18 respondents from the deaf, hard-of-hearing, and speech-impaired communities** across Serbia and the Western Balkans, combined with **published data from the WHO, EUD, EENA, European Commission, Sorenson Communications, AccesSOS, and peer-reviewed academic sources** covering **430 million people with disabling hearing loss** worldwide, directly shaped every major architectural decision in Medak.
 
 The community told us 112 is rated **1.72 out of 5** for accessibility — so we built a complete bypass. They told us **accuracy is the #1 concern** — so we built deterministic confidence gating. They told us they **depend on strangers being nearby** — so we made the AI the always-available third person. They told us **privacy matters** — so we made data ephemeral by design. Published research showed that **every previous solution required changing the emergency center** — so we designed Medak to produce a normal voice call. Academic evidence that deaf patients **wait 30 minutes longer** in emergency departments drove us to deliver clinical data proactively.
 

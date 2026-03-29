@@ -232,7 +232,7 @@ Every judge will assume we need emergency centers to adopt new software. When we
 Demo mode means we don't fumble. We don't apologize. We don't say "usually this works." We press the button and it runs. In a hackathon full of crashing demos, a smooth 38-second relay feels like magic.
 
 ### Ana's Name
-"1.2 million deaf people in the EU" is a statistic. Ana is a person. After 10 teams citing WHO data, one team gave the problem a name and a face. That's the team judges remember.
+"One million deaf people in the EU" is a statistic. Ana is a person. After 10 teams citing WHO data, one team gave the problem a name and a face. That's the team judges remember.
 
 ### The Workshop Echo
 Judges will have seen 10 projects that are basically `gemini.generateContent()` with a nice frontend. Then they see us: two concurrent Gemini Live sessions, a deterministic FSM, Redis shared state, real A2A coordination. They'll think: "THIS is what the workshop was about." We're the validation of everything they learned today.

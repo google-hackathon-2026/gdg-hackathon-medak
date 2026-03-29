@@ -14,7 +14,7 @@ Users are the people in an emergency who cannot make a voice call to 112.
 |-------|------|-----------------|-------|
 | **Serbia** | ~14,000 | ~70,000 | **~84,000** |
 | **EU-27** | — | — | **~52M** (EUD, 2023) |
-| **Global** | ~70M | — | **~466M** with disabling hearing loss (WHO, 2024) |
+| **Global** | ~70M | — | **~430M** with disabling hearing loss (WHO, 2021/2026) |
 
 - Core user base. These people **literally cannot** make a voice call.
 - Everyday smartphone users — no special hardware needed.
@@ -50,7 +50,7 @@ Users are the people in an emergency who cannot make a voice call to 112.
 |-------|----------|
 | **Serbia** | ~135K core + 2M tourists |
 | **EU-27** | ~57M core (52M D/HoH + 5M speech-impaired) + 400M tourists |
-| **Global** | ~466M+ with disabling hearing loss (WHO, 2024) |
+| **Global** | ~430M+ with disabling hearing loss (WHO, 2021/2026) |
 
 ---
 
@@ -173,7 +173,7 @@ Users are vulnerable populations with low purchasing power. Buyers are governmen
 
 | Component | Cost per Call |
 |-----------|-------------|
-| Gemini 2.5 Flash — scene analysis + description | ~$0.015 |
+| Gemini 2.0 Flash Live — scene analysis + voice dispatch | ~$0.015 |
 | Twilio — outbound voice call to 112 (~5 min) | ~$0.07 |
 | Gemini TTS — AI voice narration to operator | ~$0.02 |
 | Infrastructure (servers, monitoring, overhead) | ~$0.02 |

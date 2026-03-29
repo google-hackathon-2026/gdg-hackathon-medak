@@ -320,7 +320,7 @@ Before answering anything, remember the system as built:
 
 > "RTT — Real-Time Text — jeste standard, i podržavamo ga kao koncept. Problem je trostruk.
 >
-> Prvo: RTT zahteva da PSAP centar ima opremu i obuku za prijem teksta. U Srbiji — nijedan centar to nema. U EU — možda 5% centara ima tu mogućnost. RTT rešava problem samo tamo gde je infrastruktura već postavljena.
+> Prvo: RTT zahteva da PSAP centar ima opremu i obuku za prijem teksta. U Srbiji — nijedan centar to nema. U EU, do 2025. godine, samo Irska ima nativni RTT — prva zemlja u celoj EU. Malta i Holandija imaju RTT preko aplikacije. Većina ostalih cilja jun 2027., ali kašnjenja su česta — Finska je već odložila sa 2025. na 2027. RTT rešava problem samo tamo gde je infrastruktura već postavljena.
 >
 > Drugo: RTT je tekst. U panici, ljudi ne mogu efikasno da kucaju. Naše istraživanje i objavljene studije potvrđuju: kucanje u kriznoj situaciji je sporo, netačno, i stresno. Kamera koja vidi scenu je fundamentalno bolja od teksta koji opisuje scenu.
 >
@@ -332,17 +332,20 @@ Before answering anything, remember the system as built:
 
 > "RTT — Real-Time Text — is a standard, and we support it as a concept. The problem is threefold.
 >
-> First: RTT requires the PSAP center to have equipment and training for receiving text. In Serbia — no center has that. In the EU — maybe 5% of centers have this capability. RTT only solves the problem where infrastructure is already in place.
+> First: RTT requires the PSAP center to have equipment and training for receiving text. In Serbia — no center has that. In the EU, as of 2025, only Ireland has native RTT — the first country in the entire EU. Malta and Netherlands have app-based RTT. Most others target June 2027 but delays are common — Finland already delayed from 2025 to 2027. RTT only solves the problem where infrastructure is already in place.
 >
 > Second: RTT is text. In a panic, people can't type effectively. Our research and published studies confirm: typing in a crisis is slow, inaccurate, and stressful. A camera that sees the scene is fundamentally better than text describing the scene.
 >
 > Third: RTT doesn't enable dialogue. The operator asks a question by voice — who translates that to text? With RTT, the operator has to type back. With Medak, the operator speaks normally, AI translates to text, the user reads and types a response, AI speaks it. Natural conversation flow.
 >
-> RTT and Medak aren't competitors — they're complementary. But RTT alone doesn't solve the problem because it assumes infrastructure that doesn't exist."
+> RTT and Medak aren't competitors — they're complementary. But RTT alone doesn't solve the problem because it assumes infrastructure that doesn't exist.
+>
+> And here's what dispatchers themselves say: the director of a US 911 center that just added text-to-911 last week said — quote — 'We get so much more information from somebody calling in and hearing what's going on in the background, hearing their voice. We ask people to call if you can, text if you can't.' Dispatchers prefer voice because it carries richer information. Medak gives them voice."
 
 ### 🎯 Delivery Notes
 - Don't dismiss RTT — acknowledge it, then show why it's insufficient
 - "Pretpostavlja infrastrukturu koja ne postoji" is the knockout punch
+- The 911 director quote is powerful — even where text exists, dispatchers prefer voice
 
 ---
 

@@ -115,8 +115,8 @@ Option 2 is safer and still scores well on "actual use, not mockup" because the 
 Five different numbers across five documents. Same metric. This is embarrassing.
 
 **Global numbers too:**
-- PITCH + PERSONAE: 466 million (WHO)
-- MARKET: 430 million (WHO 2024)
+- PITCH + PERSONAE: ~~466 million~~ → **430 million** (WHO, corrected)
+- MARKET: 430 million (WHO 2021/2026) ✅
 - USERS_VS_BUYERS: 500 million (70M deaf + 430M HoH)
 
 These are different WHO figures measured differently (disabling hearing loss vs all hearing loss vs deaf specifically). But the pitch uses them interchangeably.
@@ -128,7 +128,7 @@ These are different WHO figures measured differently (disabling hearing loss vs 
 50K vs 14K for "deaf" is a 3.5x discrepancy.
 
 **Fix:** Pick ONE authoritative source per scope and use it everywhere:
-- Global: 466M with disabling hearing loss (WHO, most recent report)
+- Global: **430M** with disabling hearing loss (WHO 2021 World Report on Hearing / 2026 Fact Sheet; old figure was 466M using >40dB threshold, current uses >35dB)
 - EU: 52M deaf/HoH (EUD — most official European source)
 - Serbia: 14,000 deaf + 70,000 hard of hearing = 84,000 (Statistical Office of RS)
 - Search-and-replace across ALL docs.
@@ -311,7 +311,7 @@ But the pitch opens with Ana. This is actually FINE — Ana is the consistent he
 ### OBS-6: The Emotional Close (Slide 12) Is Strong but Could Be Stronger
 
 Current close:
-> "466 miliona ljudi na svetu ne može da pozove pomoć kad im je najpotrebija."
+> "430 miliona ljudi na svetu ne može da pozove pomoć kad im je najpotrebija."
 
 This is the same statistic from Slide 2. By Slide 12, the audience has heard it. It's less impactful on repetition.
 

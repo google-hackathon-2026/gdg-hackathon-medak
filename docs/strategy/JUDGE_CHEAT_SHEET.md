@@ -2,7 +2,7 @@
 
 ## The Problem
 
-112 is voice-only. In Serbia and most of Europe, there is no way for deaf, hard-of-hearing, or speech-impaired people to contact emergency services independently. The EU mandates accessible 112 by June 2027 (EECC Art. 109), but no member state is ready. Meanwhile, 466 million people worldwide (WHO 2024) — 52 million in the EU alone (EUD 2023) — are locked out of the most basic safety net. When a stroke happens at home and you can't speak, you die waiting.
+112 is voice-only. In Serbia and most of Europe, there is no way for deaf, hard-of-hearing, or speech-impaired people to contact emergency services independently. The EU mandates accessible 112 by June 2027 (EECC Art. 109), but no member state is ready. Meanwhile, 430 million people worldwide (WHO, 2021 World Report on Hearing) — 52 million in the EU alone (EUD 2023) — are locked out of the most basic safety net. When a stroke happens at home and you can't speak, you die waiting.
 
 ## Our Solution
 
@@ -31,8 +31,9 @@ Medak is a mobile app where a deaf user presses one SOS button. Two AI agents �
 
 ## Key Numbers
 
-- **466M** deaf/HoH people worldwide (WHO 2024)
+- **430M** deaf/HoH people worldwide (WHO 2021/2026)
 - **52M** in the EU (EUD 2023)
+- **84K** in Serbia (14K deaf + 70K hard of hearing) — **zero** alternative access to 112
 - **$0.13/call** vs $20–40 human relay → **150× cheaper**
 - **38 seconds** SOS → dispatch confirmed
 - **83%** of surveyed deaf respondents said they would use it

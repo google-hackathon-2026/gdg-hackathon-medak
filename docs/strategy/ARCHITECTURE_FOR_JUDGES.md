@@ -212,7 +212,7 @@ Push notification channel for background alerts — e.g., "Help dispatched, ETA 
 4. **Redis scales horizontally** — Redis Cluster for multi-node deployments. Each session maps to a single key, so sharding is trivial.
 
 5. **Cost per emergency call:**
-   - Gemini 2.5 Flash (scene analysis + description): ~$0.015
+   - Gemini 2.0 Flash Live (scene analysis + voice dispatch): ~$0.015
    - Twilio voice (~5 min): ~$0.07
    - Gemini TTS (voice narration): ~$0.02
    - Infrastructure: ~$0.02

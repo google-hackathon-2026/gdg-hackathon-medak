@@ -279,7 +279,7 @@ That last quote was from **1987**. Nearly 40 years later, the problem persists.
 ### 5.3 World Health Organization (WHO)
 
 *"Over 5% of the world's population – or 430 million people – require rehabilitation to address their disabling hearing loss. It is estimated that by 2050 over 700 million people will have disabling hearing loss."*
-— WHO Fact Sheet: Deafness and Hearing Loss, 2024
+— WHO Fact Sheet: Deafness and Hearing Loss, 2026 (updated March 3, 2026)
 
 *"Unaddressed hearing loss poses an annual global cost of almost US$ 1 trillion."*
 — WHO World Report on Hearing, 2021

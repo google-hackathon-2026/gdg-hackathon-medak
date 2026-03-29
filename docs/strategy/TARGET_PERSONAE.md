@@ -202,7 +202,7 @@
 
 | Metric | Number | Source |
 |---|---|---|
-| People with disabling hearing loss globally | **466 million** | WHO, 2024 |
+| People with disabling hearing loss globally | **430 million** | WHO, 2021 World Report on Hearing / 2026 Fact Sheet |
 | Projected by 2050 | **700 million** | WHO |
 | Deaf and HoH in the EU | **~52 million** | EUD, 2023 |
 | Deaf in Serbia | **~14,000** | Statistical Office of RS |
@@ -234,7 +234,7 @@ Serbia, as an EU accession candidate, will need to align with EECC before joinin
 │  TAM — Total Addressable Market                                 │
 │  Everyone who cannot reliably use voice-based emergency calls   │
 │                                                                 │
-│  466M deaf/HoH (WHO) + 5.6M speech-impaired (EU) +             │
+│  430M deaf/HoH (WHO) + 5.6M speech-impaired (EU) +             │
 │  180M tourists with language barriers (EU, annual)              │
 │                                                                 │
 │  = ~650M+ potential users globally                              │

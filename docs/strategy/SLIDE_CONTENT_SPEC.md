@@ -135,7 +135,7 @@ Milioni ljudi nemaju glas.
 
 | Number | Label below it | Color |
 |--------|---------------|-------|
-| **466M** | people with disabling hearing loss worldwide (WHO) | Emergency Red `#D32F2F` |
+| **430M** | people with disabling hearing loss worldwide (WHO) | Emergency Red `#D32F2F` |
 | **84,000** | deaf and hard of hearing in Serbia | Emergency Red `#D32F2F` |
 | **0** | countries offering full equivalent 112 access (EUD 2024) | Emergency Red `#D32F2F` |
 

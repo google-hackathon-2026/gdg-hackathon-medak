@@ -20,7 +20,9 @@
 
 **Why it matters for Medak:** This is the origin story of AccesSOS — proof that the texting-a-friend workaround is a life-threatening gamble, not a solution.
 
-**Source:** AccesSOS (accessos.io); AmeriDisability interview; Stand Together profile.
+**Recent update (2025):** AccesSOS now has 69,611 users, 145+ people accessed lifesaving help. Expanded to 30 languages. But still only available in California and New Mexico — proving the problem exists at massive scale, but text-based solutions can only expand where text-to-911 infrastructure exists.
+
+**Source:** AccesSOS (accessos.io); PagerDuty case study, 2025; PRLog, Sept 2025.
 
 ---
 
@@ -74,10 +76,10 @@
 | "Cardiac arrest survival drops 7-10% for every minute without defibrillation. A deaf person's emergency chain adds 5-15 minutes minimum." | AHA Guidelines + case studies |
 | "1 in 10 deaf people in the UK have avoided calling an ambulance entirely because of communication barriers." | RNID / SignHealth |
 | "1 in 4 deaf people in the UK delayed seeking help for new health concerns." | RNID / SignHealth |
-| "Only ~30% of US 911 centers can accept text messages. Nationwide text-to-911 isn't expected until 2032." | AccesSOS / FCC |
+| "Only about half of US 911 centers can accept text messages as of 2025." | FCC / PagerDuty report, 2025 |
 | "Serbia has zero alternative access to 112 — no SMS, no app, no video relay, no text relay. Nothing." | EENA Accessibility Table |
-| "65 million Americans — deaf, hard-of-hearing, and limited-English speakers — cannot reliably call 911." | AccesSOS / Stand Together |
-| "The EU mandated equivalent emergency access by June 2025. Most member states aren't there yet." | European Accessibility Act, Directive 2019/882/EC |
+| "37 million deaf/HoH Americans + 29.6 million with limited English proficiency cannot reliably call 911." | AccesSOS, 2025 |
+| "The EU mandated equivalent emergency access by June 2025 (EAA), with derogation allowing until June 2027. The UN CRPD Committee expressed 'serious concern' about the delays in March 2025." | EAA, Directive 2019/882/EC; UN CRPD Concluding Observations, 2025 |
 | "Unaddressed hearing loss costs the global economy $980 billion annually." | WHO World Report on Hearing, 2021 |
 | "Serbia's ~84,000 deaf and hard of hearing citizens have the same emergency access as they had in 1990: none." | EENA data + Statistical Office of RS |
 

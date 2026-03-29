@@ -2,12 +2,15 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║                    MEDAK PITCH — POCKET CARD                    ║
 ║              GDG Belgrade Hackathon 2026 · 10 min               ║
+╠══════════════════════════════════════════════════════════════════╣
+║ ⚠️ STATS UPDATE (Mar 29): 466M → 430M (WHO corrected)          ║
+║    See STATS_QUICK_REFERENCE.md for all verified numbers        ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 SLIDE │ TIME  │ KEY LINE                              │ CUT?
 ──────┼───────┼───────────────────────────────────────┼────────────
   1   │ 0:30  │ "Zgrabi telefon — ali ne može"        │ ❌
-  2   │ 1:50  │ 466M / 84K / 0                        │ ✂️ Stefan
+  2   │ 1:50  │ 430M / 84K / 0                        │ ✂️ Stefan
   3   │ 2:40  │ "Mi ne menjamo ništa"                 │ ✂️ infra
   4   │ 3:40  │ "Dva agenta. Jedan vidi. Drugi govori" │ ❌
   5   │ 5:10  │ [DEMO — ĆUTI! 42s tišine]             │ ❌
@@ -24,7 +27,7 @@ SLIDE │ TIME  │ KEY LINE                              │ CUT?
 ══════════════════════════════════════════════════════════════════
 
 📊 NUMBERS TO MEMORIZE
-  • 466M worldwide · 52M EU · 84K Serbia
+  • 430M worldwide · 52M EU · 84K Serbia
   • $0.13/call  vs  $20-40 human  (150× cheaper)
   • 38 seconds  SOS → dispatch confirmed
   • 83% of deaf respondents would use AI relay

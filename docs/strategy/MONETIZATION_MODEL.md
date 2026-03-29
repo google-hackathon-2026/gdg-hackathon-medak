@@ -60,8 +60,8 @@ The **European Accessibility Act (EAA)** mandates that all EU Member States ensu
 
 | Component | Cost | Notes |
 |-----------|------|-------|
-| Gemini 2.5 Flash — scene analysis (video/image input) | ~$0.01 | ~2K tokens input + 500 output |
-| Gemini 2.5 Flash — generating emergency description | ~$0.005 | Text generation for operator briefing |
+| Gemini 2.0 Flash Live — scene analysis (video/image input) | ~$0.01 | ~2K tokens input + 500 output |
+| Gemini 2.0 Flash Live — generating emergency description | ~$0.005 | Text generation for operator briefing |
 | Twilio — outbound voice call to 112 (~5 min) | ~$0.07 | EU rates, $0.014/min equivalent |
 | Gemini TTS — AI voice narration to operator | ~$0.02 | Text-to-speech for the call |
 | Infrastructure (servers, monitoring, overhead) | ~$0.02 | Amortized cloud costs |
