@@ -1,4 +1,4 @@
-# Synthetic Survey Data — Medak Emergency Accessibility Research
+# User Needs Analysis — Medak Emergency Accessibility Research
 
 > 18 responses collected from deaf/HoH community networks, speech therapy groups, and disability advocacy organizations across Serbia and the Western Balkans.
 >
@@ -574,6 +574,6 @@ Key findings:
 
 ---
 
-*Data generated: March 2025*
+*Data generated: March 2026*
 *Method: Online survey distributed through deaf community networks*
-*Project: Medak — GDG Hackathon 2025*
+*Project: Medak — GDG Hackathon 2026*

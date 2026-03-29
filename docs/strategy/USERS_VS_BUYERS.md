@@ -13,8 +13,8 @@ Users are the people in an emergency who cannot make a voice call to 112.
 | Scope | Deaf | Hard of Hearing | Total |
 |-------|------|-----------------|-------|
 | **Serbia** | ~14,000 | ~70,000 | **~84,000** |
-| **EU-27** | ~1M | ~34M | **~35M** |
-| **Global** | ~70M | ~430M | **~500M** |
+| **EU-27** | — | — | **~52M** (EUD, 2023) |
+| **Global** | ~70M | — | **~466M** with disabling hearing loss (WHO, 2024) |
 
 - Core user base. These people **literally cannot** make a voice call.
 - Everyday smartphone users — no special hardware needed.
@@ -49,8 +49,8 @@ Users are the people in an emergency who cannot make a voice call to 112.
 | Scope | Estimate |
 |-------|----------|
 | **Serbia** | ~135K core + 2M tourists |
-| **EU-27** | ~42M core + 400M tourists |
-| **Global** | ~540M+ core |
+| **EU-27** | ~57M core (52M D/HoH + 5M speech-impaired) + 400M tourists |
+| **Global** | ~466M+ with disabling hearing loss (WHO, 2024) |
 
 ---
 
@@ -173,13 +173,14 @@ Users are vulnerable populations with low purchasing power. Buyers are governmen
 
 | Component | Cost per Call |
 |-----------|-------------|
-| Gemini API (multimodal input + voice generation) | ~$0.02 |
-| Twilio voice call (connect to 112) | ~$0.02 |
-| Infrastructure (server, logging, monitoring) | ~$0.01 |
-| **Total cost per emergency call** | **~$0.05** |
+| Gemini 2.5 Flash — scene analysis + description | ~$0.015 |
+| Twilio — outbound voice call to 112 (~5 min) | ~$0.07 |
+| Gemini TTS — AI voice narration to operator | ~$0.02 |
+| Infrastructure (servers, monitoring, overhead) | ~$0.02 |
+| **Total cost per emergency call** | **~$0.13** |
 
 Average emergency calls per year for D/HoH population in a country like Serbia: ~500–2,000 calls.
-**Annual variable cost: ~$25–$100.** Essentially free to operate.
+**Annual variable cost: ~$65–$260.** Essentially free to operate.
 
 ### Our Pricing Model
 
@@ -200,7 +201,7 @@ Average emergency calls per year for D/HoH population in a country like Serbia: 
 | **Traditional relay services** | €2–8M/year | Human interpreters per country |
 | **Medak** | **€200–500K/year** | **AI-powered, no human operators, scales instantly** |
 
-**10–20x cost reduction.** Not incremental improvement — a category shift.
+**10–20x cost reduction on license; 150x cheaper per call ($0.13 vs $20–40).** Not incremental improvement — a category shift.
 
 ### Why Governments Can't Say No
 
@@ -218,7 +219,7 @@ Average emergency calls per year for D/HoH population in a country like Serbia: 
 ```
 USERS                          BUYERS
 ───────────────────           ───────────────────
-42M+ in EU alone               EU governments
+52M+ in EU alone               EU governments
 Can't call 112                 MUST comply by June 2027
 Low purchasing power            €200-500K/year budget
 Don't choose the solution       Deploy as infrastructure
@@ -227,12 +228,12 @@ Don't choose the solution       Deploy as infrastructure
          │       MEDAK          │
          │                      │
          │  AI emergency relay  │
-         │  $0.05 per call      │
-         │  10x cheaper than    │
+         │  $0.13 per call      │
+         │  150x cheaper than   │
          │  human interpreters  │
          │  Works in any        │
          │  language             │
          └─────────────────────┘
 ```
 
-**One-liner:** Governments are legally required to make 112 accessible by 2027. We do it 10x cheaper than anyone else.
+**One-liner:** Governments are legally required to make 112 accessible by 2027. We do it 150x cheaper per call than anyone else.

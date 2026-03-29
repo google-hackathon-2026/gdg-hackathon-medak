@@ -184,8 +184,8 @@ Backend authenticates via **Application Default Credentials** and connects throu
 ### Google Cloud Run (Deployment Target)
 Containerized deployment target for production. The backend is already Dockerized (`docker-compose.yml`), making Cloud Run deployment a single `gcloud run deploy` command.
 
-### Firebase (Optional)
-Push notification channel for background alerts — e.g., "Help dispatched, ETA 8 min" when the app is minimized.
+### Firebase (Planned — Not Implemented in PoC)
+Push notification channel for background alerts — e.g., "Help dispatched, ETA 8 min" when the app is minimized. Not included in the current PoC; would be added in production for reliable background delivery.
 
 ---
 
@@ -212,9 +212,11 @@ Push notification channel for background alerts — e.g., "Help dispatched, ETA 
 4. **Redis scales horizontally** — Redis Cluster for multi-node deployments. Each session maps to a single key, so sharding is trivial.
 
 5. **Cost per emergency call:**
-   - Gemini Live: ~$0.02–0.05 (30s of audio + tool calls)
-   - Twilio voice: ~$0.03–0.08 (30s call)
-   - **Total: $0.05–0.13 per emergency**
+   - Gemini 2.5 Flash (scene analysis + description): ~$0.015
+   - Twilio voice (~5 min): ~$0.07
+   - Gemini TTS (voice narration): ~$0.02
+   - Infrastructure: ~$0.02
+   - **Total: ~$0.13 per emergency** (conservative estimate)
 
 ### Production Scaling Path
 
@@ -249,7 +251,7 @@ Push notification channel for background alerts — e.g., "Help dispatched, ETA 
 | **Rate limiting** | No per-device or per-IP limits | Prevent DoS on emergency service |
 | **Monitoring** | No metrics, no alerting | Need real-time ops visibility |
 | **Audit logging** | Snapshots have TTL, no persistent log | Legal requirement for emergency calls |
-| **Multi-language** | English only | Serbia needs Serbian; EU needs 24 languages |
+| **Multi-language** | PoC runs in Serbian (demo) and English. Gemini supports 40+ languages natively — new language = config change. | Full EU deployment needs localized UI + emergency protocol tuning per country |
 | **Redundancy** | Single Redis, no failover | Emergency service needs 99.99% uptime |
 | **E2E encryption** | TLS only, no app-level encryption | Medical data requires stronger protection |
 | **Real 112 integration** | Calls a test number | Requires certification with emergency services |
@@ -270,4 +272,4 @@ Push notification channel for background alerts — e.g., "Help dispatched, ETA 
 | Voice | Twilio + Media Streams | VoIP call to 112, audio streaming |
 | Audio | audioop (μ-law ↔ PCM) | Real-time codec conversion |
 | Deploy | Docker Compose / **Cloud Run** | Containerized deployment |
-| Push | **Firebase** (optional) | Background notifications |
+| Push | **Firebase** (planned, not in PoC) | Background notifications |

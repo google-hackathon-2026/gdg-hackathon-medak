@@ -8,11 +8,11 @@
 
 Emergency services worldwide are built around a single assumption: **the caller can speak and hear.**
 
-- **430 million people** globally have disabling hearing loss (WHO, 2024)
+- **466 million people** globally have disabling hearing loss (WHO, 2024)
 - **70 million** are deaf (World Federation of the Deaf)
 - **1.5 billion** (20% of world population) live with some degree of hearing loss
-- In the EU alone, ~**46 million** people have significant hearing disabilities (European Disability Forum)
-- **Serbia has ~50,000 deaf citizens** — none of whom can independently call 112
+- In the EU alone, ~**52 million** people are deaf or hard of hearing (EUD, 2023)
+- **Serbia has ~84,000 deaf and hard of hearing citizens** (14,000 deaf + 70,000 hard of hearing) — none of whom can independently call 112
 
 For every other citizen, reaching emergency services takes **5 seconds** — dial, speak, get help. For a deaf person in Serbia today, it can take **5 minutes or more** (if help arrives at all), relying on bystanders, pre-typed SMS, or nothing.
 
@@ -53,7 +53,7 @@ For every other citizen, reaching emergency services takes **5 seconds** — dia
 - **France-only** — not transferable to other countries without building the same infrastructure.
 - **No scene understanding** — the interpreter can only relay what the user types or signs.
 
-**Medak advantage:** AI replaces 100 human interpreters. Response time is near-instant. Cost per call: ~$0.13 vs $15-40 for human relay. Deployable anywhere.
+**Medak advantage:** AI replaces 100 human interpreters. Response time is near-instant. Cost per call: ~$0.13 vs $20-40 for human relay. Deployable anywhere.
 
 ---
 
@@ -251,7 +251,7 @@ When the dispatcher asks *"Is the person breathing?"*, Medak:
 
 This **bidirectional relay** is impossible with SMS, pre-typed messages, or icon-based apps.
 
-### 4.5 Cost: $0.13/call vs $15-80/call
+### 4.5 Cost: $0.13/call vs $20-80/call
 
 | Solution | Cost Per Call | Infrastructure |
 |---|---|---|
@@ -260,7 +260,7 @@ This **bidirectional relay** is impossible with SMS, pre-typed messages, or icon
 | US VRS | $30-80 | $629M/year federal fund |
 | Human interpreter | $50-150/hour | Agency + travel |
 
-Medak is **100-600x cheaper** than human-relay alternatives.
+Medak is **150-300x cheaper** than human-relay alternatives ($0.13/call vs $20-40 for human relay).
 
 ### 4.6 Multilingual by Default
 
@@ -332,19 +332,19 @@ The global regulatory environment is **converging on mandatory accessible emerge
 ## 6. Market Size
 
 ### 6.1 Immediate (Hackathon Scope)
-- **Serbia:** ~50,000 deaf citizens, 700,000+ with hearing loss
+- **Serbia:** ~84,000 deaf and hard of hearing citizens (14,000 deaf + 70,000 hard of hearing, Statistical Office of RS)
 - **Problem:** Zero accessible 112 options today
 
 ### 6.2 European Market
-- **EU population with disabling hearing loss:** ~46 million
+- **EU population deaf/hard of hearing:** ~52 million (EUD, 2023)
 - **EU countries without accessible 112:** ~22 out of 27
 - **EAA compliance spending potential:** Governments will allocate budgets specifically for 112 accessibility by 2027
 
 ### 6.3 Global Market
-- **430 million** people with disabling hearing loss worldwide (WHO)
+- **466 million** people with disabling hearing loss worldwide (WHO, 2024)
 - **70 million** deaf people globally
 - Emergency relay services market: **$2.1 billion/year** (US TRS Fund alone is $1.2B)
-- AI can collapse this market's cost structure by **100x**
+- AI can collapse this market's cost structure by **150x+**
 
 ---
 
@@ -380,5 +380,5 @@ Governments check a box ("we have accessible 112") without actually solving the 
 
 ---
 
-*Document prepared for GDG Hackathon Medak — March 2025*
+*Document prepared for GDG Hackathon Medak — March 2026*
 *Grading criteria: "Did the team research the market and competition?"*

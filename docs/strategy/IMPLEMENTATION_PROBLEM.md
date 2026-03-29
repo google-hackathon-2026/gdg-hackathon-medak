@@ -18,31 +18,48 @@ That's it. No breathing status. No consciousness level. No victim count. The 112
 
 ### The "Aha" Moment
 
-We stared at the logs and realized what happened: the LLM was *too eager*. Gemini detected "medical" and "address" in the first two utterances, called both tools, and the confidence math checked out — emergency type (0.30) + location (0.35) + GPS (0.20) = 0.85. Threshold met. Dispatch triggered.
+We stared at the logs and realized what happened: the LLM was *too eager*. Gemini detected "medical" and "address" in the first two utterances, called both tools, and the confidence math checked out. Here's what the **original weights** looked like:
+
+**BEFORE (original weights — the broken version):**
+
+| Field | Weight |
+|---|---|
+| Location confirmed | 0.35 |
+| Emergency type | **0.30** |
+| GPS available | 0.20 |
+| Consciousness level | 0.10 |
+| Breathing status | 0.10 |
+| Victim count | 0.05 |
+
+Emergency type (0.30) + location (0.35) + GPS (0.20) = **0.85**. Threshold met. Dispatch triggered — with zero clinical data.
 
 The system was working exactly as designed. The design was wrong.
 
-We were letting *any combination* of fields push the score past 0.85. But from an emergency dispatcher's perspective, "medical emergency at an address" without clinical details is barely better than a pocket dial. The operator *needs* to know: Is the person breathing? Are they conscious? How many victims?
+We were letting *any combination* of fields push the score past 0.85, and the emergency type weight was too high at 0.30. From an emergency dispatcher's perspective, "medical emergency at an address" without clinical details is barely better than a pocket dial. The operator *needs* to know: Is the person breathing? Are they conscious? How many victims?
 
 That's when it clicked: **confidence scoring is too critical to delegate to an LLM.** You can't let the model decide when it "feels" confident enough. You need deterministic, weighted gates that force specific clinical data to be collected before dispatch.
 
 ### The Fix
 
-We redesigned `compute_confidence()` in `snapshot.py` as a purely deterministic weighted score:
+We did two things: (1) **rebalanced the weights** — reducing emergency type from 0.30 → 0.25 and increasing clinical fields, and (2) **added mandatory clinical data requirements** that make it impossible to dispatch without triage information.
 
-| Field | Weight | Why |
-|---|---|---|
-| Location confirmed | 0.35 | Dispatcher's #1 need — where to send help |
-| Emergency type | 0.25 | Determines which unit responds |
-| Consciousness level | 0.15 | Critical triage data |
-| Breathing status | 0.15 | Critical triage data |
-| Victim count | 0.10 | Scales the response |
+**AFTER (fixed weights — current version):**
+
+| Field | Weight | Change | Why |
+|---|---|---|---|
+| Location confirmed | 0.35 | — | Dispatcher's #1 need — where to send help |
+| Emergency type | **0.25** | ↓ from 0.30 | Still important, but shouldn't dominate |
+| Consciousness level | **0.15** | ↑ from 0.10 | Critical triage data — weighted higher |
+| Breathing status | **0.15** | ↑ from 0.10 | Critical triage data — weighted higher |
+| Victim count | **0.10** | ↑ from 0.05 | Scales the response |
 
 The math now makes it **impossible** to reach 0.85 without clinical data:
 
-- Location + type alone = 0.60 → not enough
-- Location + type + GPS bonus = 0.80 → still not enough
+- Location + type alone = 0.60 → not enough (was 0.65 before)
+- Location + type + GPS bonus = 0.80 → still not enough (was 0.85 — this was the exact bug)
 - Location + type + consciousness + breathing = 0.90 → ✅ dispatch
+
+We didn't just add clinical data requirements — we also rebalanced the weights so that type alone can never push the score high enough to bypass triage.
 
 No LLM judgment call. No prompt engineering. Just arithmetic. The User Agent's system prompt guides it to ask the right questions in the right order, but the *gate* — the decision of when we have enough to call 112 — is pure code.
 

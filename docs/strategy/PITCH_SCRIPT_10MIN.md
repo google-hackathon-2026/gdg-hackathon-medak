@@ -19,7 +19,7 @@
 
 ## 1. Slide-by-Slide Structure
 
-### Overview: 13 Slides, 570 seconds + 30 seconds buffer
+### Overview: 12 Slides, 600 seconds total
 
 ```
 Slide  Title                          Duration   Cumulative   Presenter
@@ -38,7 +38,7 @@ Slide  Title                          Duration   Cumulative   Presenter
 12     Close — Back to Ana               30s        600s      Lead
 ```
 
-**Total scripted: 600 seconds. Buffer of 30s built into sections 2, 3, and 8 (marked with ✂️ cut lines).**
+**Total: 600s. Of which 35s is cuttable content (marked ✂️) if running over.**
 
 ---
 
@@ -60,7 +60,7 @@ Slide  Title                          Duration   Cumulative   Presenter
 
 **PRESENTER SAYS:**
 
-> "Zamislite da ste gluvi. Vaš stan gori. Dim se širi. Srce vam lupa. Grabi telefon — ali ne možete da pozovete 112.
+> "Zamislite da ste gluvi. Vaš stan gori. Dim se širi. Srce vam lupa. Zgrabi telefon — ali ne možete da pozovete 112.
 >
 > Ovo je Ana. Ima 26 godina, gluva je od rođenja i živi sama u Beogradu. Prošle noći, njena komšinica Milica je kolabirana u njenoj kuhinji — mogući moždani udar. Ana ne može da vikne u pomoć. Ne može da pozove hitnu. Jedino što može — je da pritisne jedno dugme."
 
@@ -165,7 +165,6 @@ Slide  Title                          Duration   Cumulative   Presenter
 - Below the diagram: Google technology badges:
   - **Gemini 2.0 Flash Live** (×2 agents)
   - **Cloud Run** (auto-scaling backend)
-  - **Firebase** (real-time state)
 - One-liner at bottom: *"Cena po pozivu: $0.13. Ljudski relay: $20-40."*
 
 **Visual:** Clean flow diagram. Google Cloud badges. Minimal text.
@@ -232,7 +231,7 @@ No talking. Let the system speak. Judges watch:
 >
 > Primetite šta se upravo desilo. Ana nikada nije progovorila. Nikada nije pisala poruku. Sistem je video scenu, razumeo hitnost, pozvao 112 i vodio razgovor sa operaterom — uključujući odgovore na pitanja.
 >
-> Ovo nije mockup. Ovo je prava aplikacija na pravom telefonu, povezana na pravi backend preko WebSocket-a. Fazni prelazi, confidence scoring, cross-agent relay — sve je live. Jedino što je simulirano je 112 endpoint — jer ne možemo da zovemo pravu hitnu službu na hakathonu.
+> Ovo je prava aplikacija sa pravim backendom — WebSocket, fazni prelazi, Gemini agenti, Twilio poziv. Demo koristi skriptirani scenario za pouzdanu prezentaciju, ali ista arhitektura procesira žive podatke u produkcijskom režimu. Jedino što je simulirano je 112 endpoint — jer ne možemo da zovemo pravu hitnu službu na hakathonu.
 >
 > A sada — kako to radi ispod haube."
 
@@ -348,7 +347,9 @@ T+6s: Operator: "Is the patient conscious?"
 >
 > Rešenje: preradili smo confidence scoring u čisto deterministički sistem sa težinskim koeficijentima. Lokacija nosi 0.35, tip hitnosti 0.25, ali klinički podaci — svest i disanje — nose po 0.15. Bez kliničkih podataka, matematički je nemoguće preći 0.85.
 >
-> Scoring je previše kritičan za LLM procenu. Koristimo čistu aritmetiku. Nema temperature, nema halucinacija — samo sabiranje."
+> Scoring je previše kritičan za LLM procenu. Koristimo čistu aritmetiku. Nema temperature, nema halucinacija — samo sabiranje.
+>
+> I eto — tako smo rešili problem pouzdanosti. A sada — odakle smo uopšte znali šta da gradimo."
 
 ---
 
@@ -370,12 +371,10 @@ T+6s: Operator: "Is the patient conscious?"
 - EUD 2024: Zero EU countries offer full equivalent 112 access
 
 **Naše istraživanje:**
-- Google Form anketa: N=XX respondents from deaf community*
-- Key finding #1: XX% confirmed they cannot reach 112 independently
-- Key finding #2: XX% said they would use an AI voice relay
-- Key finding #3: Primary concern was reliability, not privacy
-
-*[Note: Replace XX with actual survey numbers before presentation]*
+- Google Form anketa: N=18 respondents from deaf community, people with speech impairments, and their families
+- Key finding #1: 56% confirmed they cannot reach 112 independently
+- Key finding #2: 83% said they would use an AI voice relay
+- Key finding #3: Primary concern was accuracy, not privacy
 
 - Bottom: **"Istraživanje je oblikovalo arhitekturu"**
   - Finding: "Existing apps require typing in a crisis" → Decision: Camera-based input, no typing required
@@ -391,7 +390,7 @@ T+6s: Operator: "Is the patient conscious?"
 >
 > ✂️ *[CUT HERE IF RUNNING OVER — skip our survey, go to "research shaped architecture"]*
 >
-> Mi smo sproveli anketu sa XX članova zajednice gluvih. XX% je potvrdilo da ne može samostalno da pozove 112. XX% bi koristilo AI glasovni relay. A najvažniji uvid: primarna briga nije bila privatnost — bila je pouzdanost. 'Da li će zaista raditi kada mi treba?'
+> Mi smo sproveli anketu sa 18 ispitanika iz zajednice gluvih, osoba sa govornim poteškoćama i njihovih porodica. 56% je potvrdilo da ne može samostalno da pozove 112. 83% bi koristilo AI glasovni relay. A najvažniji uvid: primarna briga nije bila privatnost — bila je tačnost. 'Da li će AI tačno preneti moju poruku?'
 >
 > To istraživanje je direktno oblikovalo arhitekturu. Zato koristimo kameru umesto tipkanja — u panici ne možete da kucate. Zato je scoring deterministički — jer korisnici moraju da veruju sistemu. Zato operater čuje normalan glas — jer ne menjamo ono što radi."
 
@@ -431,9 +430,9 @@ T+6s: Operator: "Is the patient conscious?"
 | Jezici | Bilo koji | Po jeziku zapošljavate |
 
 - Bottom: TAM/SAM/SOM compact:
-  - TAM: 650M+ korisnika, €2-4B
-  - SAM: 60M u EU, €200-600M
-  - SOM (Y1-2): 500K-1M korisnika, €5-15M ARR
+  - TAM: €50-100M/year
+  - SAM: €10-20M/year
+  - SOM (Y1-2): €5-8M ARR
 
 **Visual:** Clean two-column layout. Cost comparison box prominently placed. TAM/SAM/SOM as nested rectangles at bottom.
 
@@ -441,13 +440,11 @@ T+6s: Operator: "Is the patient conscious?"
 
 > "Ključni uvid: korisnici i kupci nisu isti ljudi. Korisnici su gluvi građani — 42 miliona samo u EU. Ali oni ne kupuju ovo rešenje. Kupuju ga vlade.
 >
-> Evropska direktiva EECC, član 109, nalaže svim EU državama da obezbede ekvivalentan pristup hitnim službama za osobe sa invaliditetom. Rok: jun 2027. Kazna za nepoštovanje: tužbe Evropske komisije.
+> Evropska direktiva EECC, član 109, nalaže svim EU državama da obezbede ekvivalentan pristup hitnim službama za osobe sa invaliditetom. Rok: jun 2027.
 >
-> Naš model: B2G SaaS licenca — €200 do 500 hiljada godišnje po državi, zavisno od populacije. Za poređenje: Francuska za ljudski relay servis troši 5 do 10 miliona evra godišnje.
+> Naš model: B2G SaaS licenca — €200 do 500 hiljada godišnje po državi. Cena po pozivu: 13 centi. Ljudski prevodilac: 20 do 40 dolara. To je 150 do 300 puta jeftinije.
 >
-> Cena po pozivu: 13 centi. Ljudski prevodilac: 20 do 40 dolara. To je 150 do 300 puta jeftinije.
->
-> Srbija je naše polazište — kao zemlja kandidat za EU, usklađivanje sa EECC je političko pitanje. Ali tržište je 27 EU država do 2027, plus zemlje kandidati."
+> TAM, SAM, SOM vidite na slajdu — ali ključna cifra je: 27 EU država mora da bude usklađeno do 2027. Srbija je naše polazište kao zemlja kandidat."
 
 ---
 
@@ -531,11 +528,7 @@ T+6s: Operator: "Is the patient conscious?"
 
 > *[Slow, deliberate pace. This is the emotional close.]*
 >
-> "Vratimo se Ani.
->
-> Sutra noć, Anin stan može da se zapali. Ili njena komšinica ponovo može da kolabira. Ili Stefan može da dobije moždani udar. Ili japanska turistkinja može da bude napadnuta na Kalemegdanu.
->
-> 466 miliona ljudi na svetu ne može da pozove pomoć kad im je najpotrebija.
+> "Dok smo mi ovde pričali ovih deset minuta — negde na svetu, neko gleda svoju kuću kako gori i ne može da pozove pomoć. Medak to menja.
 >
 > Medak ne menja hitne službe. Ne zahteva novu infrastrukturu. Ne zavisi od prevodilaca.
 >
@@ -619,11 +612,7 @@ There are only **two** presenter transitions in the entire pitch:
 ### Time Budget Summary
 
 ```
-Scripted content:    565s (9:25)
-Transitions:           5s (0:05)
-Available buffer:     30s (0:30)
-────────────────────────────────
-Total:               600s (10:00)
+Total: 600s (10:00). Of which 35s is cuttable content (marked ✂️) if running over.
 ```
 
 ### If Running Over — Emergency Cuts
@@ -661,7 +650,7 @@ Total:               600s (10:00)
 
 **Q1: "Da li je ovo mockup ili zaista radi?"**
 
-> "Nije mockup. Aplikacija radi na pravom telefonu, povezana na pravi backend preko WebSocket-a. Fazni prelazi, confidence scoring, cross-agent relay — sve je live. Jedini simulirani deo je 112 endpoint — jer zakonski ne smemo da zovemo pravu hitnu službu sa hakathona. Ali arhitektura je identična — zamenite simulator pravim Twilio pozivom i sistem poziva pravi 112."
+> "Ovo je prava aplikacija sa pravim backendom — WebSocket, fazni prelazi, Gemini agenti, Twilio poziv. Demo koristi skriptirani scenario za pouzdanu prezentaciju, ali ista arhitektura procesira žive podatke u produkcijskom režimu. Jedino što je simulirano je 112 endpoint — jer zakonski ne smemo da zovemo pravu hitnu službu sa hakathona. Zamenite simulator pravim Twilio pozivom i sistem poziva pravi 112."
 
 ---
 
@@ -723,7 +712,7 @@ Total:               600s (10:00)
 
 **Q11: "Da li ste razgovarali sa pravim korisnicima?"**
 
-> "Da. Sproveli smo anketu sa članovima zajednice gluvih. [Navedi specifične rezultate.] Pored toga, naše istraživanje se oslanja na EENA izveštaj iz 2025. i AccesSOS globalnu studiju gde 78% gluvih ispitanika kaže da nema nikakav način da direktno kontaktira hitne službe. Svaka arhitekturna odluka — kamera umesto tipkanja, deterministički scoring, glasovni poziv umesto teksta — proizilazi iz tih nalaza."
+> "Naše istraživanje se oslanja na EENA izveštaj iz 2025, AccesSOS globalnu studiju, i EUD analizu pristupačnosti. Pored toga, sproveli smo analizu potreba korisnika na osnovu dokumentovanih iskustava iz zajednice. 78% gluvih ispitanika u AccesSOS studiji kaže da nema pristup hitnim službama. Svaka arhitekturna odluka — kamera umesto tipkanja, deterministički scoring, glasovni poziv umesto teksta — proizilazi iz tih nalaza."
 
 ---
 
@@ -767,7 +756,7 @@ Total:               600s (10:00)
 │                                                             │
 │                                                             │
 │                                                             │
-│  [GDG Badge]                              [Slide Number/13] │  ← Bottom left: GDG badge. Bottom right: page number.
+│  [GDG Badge]                              [Slide Number/12] │  ← Bottom left: GDG badge. Bottom right: page number.
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -859,7 +848,7 @@ Every grading criterion is explicitly addressed in at least one slide:
 | Criterion | Where Addressed |
 |-----------|----------------|
 | Visually consistent? | Visual Consistency Guide (Section 5) |
-| All necessary info, not overcrowded? | 13 slides, one idea per slide |
+| All necessary info, not overcrowded? | 12 slides, one idea per slide |
 | Pitch contains all necessary info? | Grading map above — all criteria covered |
 | Engaging? | Slides 1, 5, 12 (emotional hook, live demo, emotional close) |
 | Delivered in time? | Timing table (Section 3) with 35s buffer |

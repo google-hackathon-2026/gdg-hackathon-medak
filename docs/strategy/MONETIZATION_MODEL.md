@@ -14,7 +14,7 @@ The **European Accessibility Act (EAA)** mandates that all EU Member States ensu
 - Most EU PSAPs can **only receive voice calls**
 - Only Ireland has native RTT; a handful have app-based solutions
 - Upgrading PSAPs to handle video/text/Total Conversation costs **€5-50M per country** and takes years
-- 9% of Europe's population is deaf or hard of hearing (~40M people in the EU)
+- ~52 million people in the EU are deaf or hard of hearing (EUD, 2023)
 
 **Medak's value proposition:** Compliance by deployment, not by infrastructure overhaul. Governments get EAA compliance **in weeks, not years**, at a fraction of the cost.
 
@@ -79,7 +79,7 @@ The **European Accessibility Act (EAA)** mandates that all EU Member States ensu
 
 | Metric | Medak (AI) | Human Relay | Advantage |
 |--------|-----------|-------------|-----------|
-| **Cost per call** | $0.13 | $15–40 | **115–300x cheaper** |
+| **Cost per call** | $0.13 | $20–40 | **150–300x cheaper** |
 | **Availability** | 24/7/365, instant | Limited hours in most countries | ∞ |
 | **Scalability** | Unlimited concurrent | Limited by interpreter pool | ∞ |
 | **Language support** | Any (AI-based) | Per-language staffing needed | 10x+ |
@@ -195,7 +195,7 @@ PSAP Changes Required:      Zero
 | Risk | Severity | Mitigation |
 |------|----------|------------|
 | **Government procurement is slow** (12–24 months) | 🟡 High | Grants bridge Year 1. Serbia pilot = proof point. EAA 2027 deadline creates urgency. |
-| **EU AI Act: High-Risk Classification** | 🔴 Critical | Emergency AI = Annex III, Category 5(d) = high-risk. Requires conformity assessment, human oversight, transparency. Budget €50–100K for compliance. |
+| **EU AI Act: High-Risk Classification** | 🔴 Critical | Emergency AI = Annex III, Category 5(d) = high-risk. Requires conformity assessment, human oversight, transparency. Budget ~€80–100K for compliance. |
 | **Regulatory approval for AI in emergency services** | 🔴 Critical | Start with "supplementary" positioning (adds to existing services, doesn't replace). Serbia has lighter regulation = ideal testing ground. |
 | **AI reliability concerns** | 🟡 High | Medak doesn't replace 112 — it enables access where there was NO access before. The alternative is literally nothing. Frame as "AI call > no call." |
 | **Competitor entry (Big Tech)** | 🟢 Medium | Google/Apple could build this, but won't due to liability in emergency services. B2G sales require boots-on-ground relationships, not just technology. |
@@ -216,13 +216,13 @@ PSAP Changes Required:      Zero
 
 ## 9. The 2-Minute Pitch (Hackathon Version)
 
-> **"40 million deaf Europeans can't call 112. The EU says that must change by 2027. Upgrading every emergency center costs billions and takes years.**
+> **"52 million deaf Europeans can't call 112. The EU says that must change by 2027. Upgrading every emergency center costs billions and takes years.**
 >
 > **Medak fixes this in weeks. Our app uses Gemini AI to see the emergency, then calls 112 as a normal voice call. The operator hears a clear description. No PSAP upgrades. No interpreters. No infrastructure changes.**
 >
-> **Cost per call: 13 cents. Human relay: $20-40. That's 200x cheaper.**
+> **Cost per call: 13 cents. Human relay: $20-40. That's over 150x cheaper.**
 >
-> **Our model: government SaaS license, €200-500K per country per year. 27 EU countries must comply by 2027. That's a €5-10M annual market we can capture 30%+ of within 5 years.**
+> **Our model: government SaaS license, €200-500K per country per year. 27 EU countries must comply by 2027. That's a €10-20M annual market we can capture 30%+ of within 5 years.**
 >
 > **Year 1: Serbia pilot (grant-funded). Year 2: first paying EU countries. Year 3: profitable.**
 >
@@ -236,7 +236,7 @@ PSAP Changes Required:      Zero
 |--------|-------|
 | **TAM** (Total Addressable Market) | €50–100M/year (EU + US + developed world) |
 | **SAM** (Serviceable) | €10–20M/year (EU countries with EAA mandate) |
-| **SOM** (Year 5 target) | €5–8M/year (15+ country deployments) |
+| **SOM** (Year 1–2) | €5–8M ARR (Serbia + 2–3 EU early-adopter pilots) |
 | **Gross Margin** | 90–96% (SaaS with near-zero marginal cost) |
 | **LTV:CAC** | >20:1 (multi-year gov contracts, low churn) |
 | **Payback Period** | < 6 months per deal (low deployment cost) |

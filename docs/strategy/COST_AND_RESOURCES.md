@@ -33,19 +33,20 @@
 
 | Service | Cost/call | Calculation |
 |---------|----------|-------------|
-| Gemini 2.0 Flash Live | ~$0.02–0.05 | ~1K tokens × ($0.075/1M in + $0.30/1M out) × 2 agents |
-| Twilio voice | ~$0.02–0.06 | $0.02/min × 1–3 min avg call |
-| Cloud Run compute | ~$0.001 | Per-request billing |
-| **Total per call** | **~$0.05** | |
+| Gemini 2.5 Flash — scene analysis + description | ~$0.015 | ~2K tokens input + 500 output, 2 agents |
+| Twilio — outbound voice call to 112 (~5 min) | ~$0.07 | EU rates, $0.014/min equivalent |
+| Gemini TTS — AI voice narration to operator | ~$0.02 | Text-to-speech for the call |
+| Infrastructure (servers, monitoring, overhead) | ~$0.02 | Amortized cloud costs |
+| **Total per call** | **~$0.13** | Conservative estimate |
 
 ### Monthly Projections
 
 | Usage tier | Calls/month | Variable cost | Fixed cost | **Total** |
 |-----------|-------------|--------------|------------|-----------|
-| Pilot (low) | 100 | $5 | $50 | **$55** |
-| City-scale | 1,000 | $50 | $60 | **$110** |
-| National | 10,000 | $500 | $80 | **$580** |
-| EU-scale | 100,000 | $5,000 | $150 | **$5,150** |
+| Pilot (low) | 100 | $13 | $50 | **$63** |
+| City-scale | 1,000 | $130 | $60 | **$190** |
+| National | 10,000 | $1,300 | $80 | **$1,380** |
+| EU-scale | 100,000 | $13,000 | $150 | **$13,150** |
 
 ---
 
@@ -65,19 +66,23 @@
 
 **Est. cost:** 2 × €5K/month = **€30K** (or grant-funded)
 
-### Phase 2 — Compliance (3 months)
+### Phase 2 — Compliance (3–6 months)
 
 **Team:** 2 engineers + 1 compliance specialist
 
 | Task | Why |
 |------|-----|
-| EU AI Act certification | High-risk AI system (emergency services) — mandatory |
-| GDPR compliance | Emergency data processing legal basis (Art. 6(1)(d) vital interests) |
+| EU AI Act certification | High-risk AI system (Annex III, Category 5(d)) — mandatory conformity assessment |
+| Risk management system | Documented risk assessment, mitigation measures |
+| Data governance & GDPR compliance | Emergency data processing legal basis (Art. 6(1)(d) vital interests) |
+| Human oversight mechanisms | Dispatcher always in the loop — document and formalize |
+| Technical documentation | Full system documentation for regulatory audit |
 | Penetration testing | External security audit before public deployment |
 | Multi-language support | Minimum: EN, SR, DE, FR — Gemini handles natively |
 | 112 PSAP integration specs | Align with ETSI TS 103 479 (next-gen 112) |
+| Conformity assessment | Third-party assessment for high-risk AI classification |
 
-**Est. cost:** €45K (engineers + compliance consultant)
+**Est. cost:** €80–100K (engineers + compliance consultant + conformity assessment)
 
 ### Phase 3 — Scale (ongoing)
 
@@ -98,16 +103,16 @@
 
 | Solution | Cost/call | Annual infra | Staffing | Availability |
 |----------|----------|-------------|----------|--------------|
-| **Medak (AI)** | **$0.05** | **$660–$1,300** | **0 operators** | **24/7 instant** |
-| Human relay (FR 114) | $15–25 | $100K+ | 20+ operators 24/7 | Limited hours in practice |
+| **Medak (AI)** | **$0.13** | **$760–$2,300** | **0 operators** | **24/7 instant** |
+| Human relay (FR 114) | $20–40 | $100K+ | 20+ operators 24/7 | Limited hours in practice |
 | VRS (US model) | ~$30 | $500K+ | Interpreters on-demand | Business hours typical |
 | SMS-to-112 (current EU) | ~$0.01 | Minimal | 0 | Text-only, no dialogue |
 
 ### Key Advantage
 
-> **Medak is 100–500× cheaper per call** than human relay services while providing real-time, bidirectional voice dialogue 24/7 with zero staffing.
+> **Medak is 150× cheaper per call** (conservative) than human relay services while providing real-time, bidirectional voice dialogue 24/7 with zero staffing.
 
-Even at national scale (10K calls/month), Medak's total cost ($7K/year infra) is **<2% of a human relay service**.
+Even at national scale (10K calls/month), Medak's total cost (~$16.6K/year infra) is **<17% of a human relay service** — and the gap widens as AI costs continue dropping.
 
 ---
 
@@ -152,13 +157,13 @@ Even at national scale (10K calls/month), Medak's total cost ($7K/year infra) is
 
 | Metric | Value |
 |--------|-------|
-| Cost to run today | **$55/month** |
-| Cost per emergency call | **$0.05** |
-| Time to production | **6 months** (2 phases) |
+| Cost to run today | **$63/month** |
+| Cost per emergency call | **$0.13** |
+| Time to production | **6–9 months** (2 phases) |
 | Team needed | **3 people minimum** |
-| Total investment to pilot | **~€75K** |
-| Addressable users (EU) | **~1M deaf/speech-impaired** |
+| Total investment to pilot | **~€110–130K** |
+| Addressable users (EU) | **~52M deaf/hard of hearing** (EUD, 2023) |
 | Comparable services cost | **$500K+/year** |
 
-> **Medak delivers a $500K/year service for $660/year in infrastructure.**
+> **Medak delivers a $500K/year service for ~$760/year in infrastructure.**
 > The question isn't whether this should exist — it's how fast we can deploy it.

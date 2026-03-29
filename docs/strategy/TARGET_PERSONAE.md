@@ -298,19 +298,19 @@ Serbia, as an EU accession candidate, will need to align with EECC before joinin
 
 These personae are designed for direct use in presentations:
 
-- **Opening hook:** Start with Stefan (Persona 6). Everyone in the room can imagine having a stroke. It's universal, terrifying, and makes the problem personal. *"Imagine you're having a stroke. You know exactly what's happening. You pick up the phone. You dial 112. And you can't speak."*
+- **Opening hook (Slide 1):** Start with Ana (Persona 1). She's the hero of the product story — the core user who has waited her entire life for this. Open with her fire scenario: *"Ana wakes at 2 AM to the smell of smoke. She's deaf. She can't call 112. In Serbia, there is no SMS-to-112. Her only option is to bang on a neighbor's door and hope someone is awake."*
 
-- **Core user:** Ana (Persona 1) is the hero of the product story. She represents the primary market and the user who has waited her entire life for this.
+- **The universal threat (Slide 2):** Stefan (Persona 6) proves anyone can need this. *"Imagine you're having a stroke. You know exactly what's happening. You pick up the phone. You dial 112. And you can't speak."* Everyone in the room can imagine being Stefan. You don't choose when you become disabled.
 
 - **Emotional peak:** Jelena (Persona 7) — a mother who can't call for help for her injured child. This is the persona that breaks the room.
 
 - **Market expansion:** Yuki (Persona 5) shows this isn't a niche disability product — it's a universal communication bridge.
 
-- **Urgency:** Stefan (Persona 6) proves anyone can need this. You don't choose when you become disabled.
+- **Urgency:** Combine Stefan + Ana — one was born into this reality, one became disabled in an instant. Both are locked out of 112.
 
 - **Regulatory hook:** *"27 EU countries must solve this by June 2027. Zero have a solution. We built one in 24 hours."*
 
 ---
 
-*Last updated: 2025-03-29*
+*Last updated: 2026-03-29*
 *Project: Medak — GDG Hackathon*
