@@ -79,7 +79,7 @@
 | "65 million Americans — deaf, hard-of-hearing, and limited-English speakers — cannot reliably call 911." | AccesSOS / Stand Together |
 | "The EU mandated equivalent emergency access by June 2025. Most member states aren't there yet." | European Accessibility Act, Directive 2019/882/EC |
 | "Unaddressed hearing loss costs the global economy $980 billion annually." | WHO World Report on Hearing, 2021 |
-| "Serbia's ~50,000-60,000 deaf citizens have the same emergency access as they had in 1990: none." | EENA data + WHO prevalence applied to Serbia |
+| "Serbia's ~84,000 deaf and hard of hearing citizens have the same emergency access as they had in 1990: none." | EENA data + Statistical Office of RS |
 
 ---
 
