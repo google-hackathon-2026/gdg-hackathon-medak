@@ -605,7 +605,7 @@ Korisnici ≠ Kupci
 - Bullets:
 
 ```
-• 42M+ gluvih/nagluvih u EU
+• 52M gluvih/nagluvih u EU
 • Niska kupovna moć
 • Ne biraju rešenje
 ```

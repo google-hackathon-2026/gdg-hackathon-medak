@@ -409,7 +409,7 @@ T+6s: Operator: "Is the patient conscious?"
 - Two-column layout:
 
 **LEFT — Korisnici (koriste):**
-- 42M+ gluvih/nagluvih u EU
+- 52M gluvih/nagluvih u EU
 - Niska kupovna moć
 - Ne biraju rešenje
 
@@ -438,7 +438,7 @@ T+6s: Operator: "Is the patient conscious?"
 
 **PRESENTER SAYS:**
 
-> "Ključni uvid: korisnici i kupci nisu isti ljudi. Korisnici su gluvi građani — 42 miliona samo u EU. Ali oni ne kupuju ovo rešenje. Kupuju ga vlade.
+> "Ključni uvid: korisnici i kupci nisu isti ljudi. Korisnici su gluvi građani — 52 miliona samo u EU. Ali oni ne kupuju ovo rešenje. Kupuju ga vlade.
 >
 > Evropska direktiva EECC, član 109, nalaže svim EU državama da obezbede ekvivalentan pristup hitnim službama za osobe sa invaliditetom. Rok: jun 2027.
 >
