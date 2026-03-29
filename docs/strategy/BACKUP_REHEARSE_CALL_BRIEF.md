@@ -38,7 +38,7 @@ Life-or-death stakes make judges pay attention. Every year, people with speech d
 
 | Layer | Technology | Role |
 |-------|-----------|------|
-| AI Core | **Gemini 2.5 Flash** | Assessment triage, rehearsal simulation, translation, all agent reasoning |
+| AI Core | **Gemini 2.0 Flash Live** | Assessment triage, voice dispatch, translation, all agent reasoning |
 | Voice | **Gemini Live API / Cloud STT+TTS** | Real-time speech understanding (including impaired speech) and clear output |
 | Telecom | **Twilio Voice SDK** | Programmatic call initiation, audio bridge for TranslationAgent |
 | Location | **Google Maps Platform** | Geocoding GPS → address, place context ("near Children's Hospital") |
@@ -94,7 +94,7 @@ Play a recorded/simulated 911 call: a person with a severe speech impairment tri
 - **FollowUpAgent**: "Ambulance dispatched. ETA 7 minutes. Your emergency contact Maria has been notified."
 
 **[3:30–4:30] Architecture & Impact**
-Show agent diagram. Emphasize: 5 specialized agents, single Gemini backbone, rehearsal concept is novel. "The structured packet means dispatch gets *better* information than a typical verbal call." Mention: 466M people worldwide with disabling hearing loss. This isn't niche — it's infrastructure.
+Show agent diagram. Emphasize: 5 specialized agents, single Gemini backbone, rehearsal concept is novel. "The structured packet means dispatch gets *better* information than a typical verbal call." Mention: 430M people worldwide with disabling hearing loss (WHO). This isn't niche — it's infrastructure.
 
 **[4:30–5:00] Close**
 "The best emergency call is one you've already practiced. Rehearse-Then-Call turns panic into preparation."

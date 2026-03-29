@@ -107,7 +107,7 @@ Per WebAIM Million 2025: **94.8% of top 1M websites have WCAG failures**. Averag
 
 ### 2.1 The Landscape
 
-- **466 million** people worldwide with disabling hearing loss (WHO)
+- **430 million** people worldwide with disabling hearing loss (WHO, 2021/2026)
 - **70 million+** use sign language as primary language
 - Deaf vs. Hard of Hearing vs. Late-Deafened — very different needs
 - Sign language is NOT universal — there are 300+ distinct sign languages globally
@@ -442,7 +442,7 @@ Multimodal AI (vision + language + audio + video) can **bridge between modalitie
 - **Solution**: Camera + microphone input → Gemini identifies speakers visually AND by voice → produces attributed, accurate captions → displayed as AR overlay or on-device text. "Maria: 'Let's go to that Italian place.' John: 'Which one, the one on 5th street?'"
 - **Why Gemini**: Multimodal (audio + video) + speaker understanding + real-time streaming
 - **Buildable?**: Moderate — speaker diarization + visual ID is hard, but a prototype is feasible
-- **Impact**: 466 million people with hearing loss worldwide
+- **Impact**: 430 million people with disabling hearing loss worldwide (WHO)
 - **Differentiation**: No existing consumer tool combines visual speaker ID with audio speaker diarization
 
 ### 9.3 🏆 RECOMMENDED: Option A — Real-Time Multimodal Scene Assistant
