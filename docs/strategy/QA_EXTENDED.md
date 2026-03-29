@@ -443,6 +443,25 @@ Before answering anything, remember the system as built:
 
 ---
 
+## Q27: "Zašto ovo niko ranije nije napravio?"
+
+**SR:**
+> "Zato što to nije bio tehnološki problem — bio je strukturalni pat. Sedam barijera je istovremeno blokiralo rešenje. Prvo: fragmentacija — niko ne 'poseduje' 112 u Evropi, svaka od 27 država ima svoj PSAP stack. Drugo: tržišni neuspeh — gluvi su 1% populacije, premala grupa za profitabilan B2C. Treće: infrastrukturni lock-in — većina PSAP centara i dalje radi na telefonskim linijama iz 1990-ih. Četvrto: strah od odgovornosti — ko je kriv kada AI pogrešno prenese poruku u hitnom slučaju?
+>
+> A onda je stigao Gemini 2.0 Flash Live. Multimodalni real-time agent koji razume video, govori prirodno, i koristi alate — sve istovremeno, sa latencijom ispod 2 sekunde. To je enabling technology koja nije postojala pre godinu dana. Mi nismo pametni — samo smo stigli u pravo vreme sa pravom tehnologijom."
+
+**EN:**
+> "Because it wasn't a technology problem — it was a structural deadlock. Seven barriers blocked the solution simultaneously. First: fragmentation — nobody 'owns' 112 in Europe, each of 27 countries has its own PSAP stack. Second: market failure — deaf people are 1% of any country, too small for profitable B2C. Third: infrastructure lock-in — most PSAPs still run on 1990s phone lines. Fourth: liability fear — who's responsible when AI misrelays a message in an emergency?
+>
+> Then Gemini 2.0 Flash Live arrived. A multimodal real-time agent that understands video, speaks naturally, and uses tools — all simultaneously, under 2-second latency. That's the enabling technology that didn't exist a year ago. We're not smarter than everyone — we just arrived at the right time with the right technology."
+
+**🎯 Delivery Notes:**
+- Count the barriers on your fingers — it's theatrical
+- The key line: "We're not smarter — we just arrived at the right time" — humility scores points
+- If they push: reference AccesSOS founder's quote about Intrado giving up because it wasn't profitable
+
+---
+
 ## Quick Response Matrix
 
 For rapid-fire Q&A, here's the one-sentence version of each answer:
@@ -463,6 +482,7 @@ For rapid-fire Q&A, here's the one-sentence version of each answer:
 | 24 | Why not RTT? | RTT needs PSAP infrastructure that doesn't exist. No dialogue. Typing in panic is terrible. |
 | 25 | GDPR? | No storage (streaming), GDPR Art 6(1)(d) vital interests, EU Vertex AI endpoint for production. |
 | 26 | Show the code? | Pure arithmetic: 5 weights, threshold 0.85. No LLM in scoring. *[recite the function]* |
+| 27 | Why hasn't anyone built this? | 7 structural barriers (fragmentation, market failure, lock-in, liability). Gemini 2.0 Flash Live is the enabling tech that didn't exist last year. |
 
 ---
 
